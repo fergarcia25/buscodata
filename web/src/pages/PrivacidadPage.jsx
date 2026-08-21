@@ -15,10 +15,10 @@ export default function PrivacidadPage() {
         <hr className="mb-5" />
 
         {/* Términos y Condiciones */}
-        <h2 className="fw-bold mb-4" style={{ fontSize: '1.5rem', color: '#b71c1c' }}>TÉRMINOS Y CONDICIONES DE USO - INFOSOCIO.COM.AR</h2>
+        <h2 className="fw-bold mb-4" style={{ fontSize: '1.5rem', color: '#1b5e20' }}>TÉRMINOS Y CONDICIONES DE USO - BUSCADATA.COM.AR</h2>
 
         <p style={{ color: '#555', lineHeight: 1.8, marginBottom: '2rem' }}>
-          Antes de empezar: El documento que vas a leer a continuación establece las reglas, condiciones y deslindes de responsabilidad para el uso de nuestro sitio web. Al navegar y utilizar este sitio, aceptás de manera expresa que INFOSOCIO actúa exclusivamente como un canal de intermediación comercial y facilitador de servicios provistos por empresas terceras, no poseyendo bases de datos crediticias o comerciales propias. Te recomendamos leer estas condiciones con detenimiento.
+          Antes de empezar: El documento que vas a leer a continuación establece las reglas, condiciones y deslindes de responsabilidad para el uso de nuestro sitio web. Al navegar y utilizar este sitio, aceptás de manera expresa que BUSCADATA actúa exclusivamente como un canal de intermediación comercial y facilitador de servicios provistos por empresas terceras, no poseyendo bases de datos crediticias o comerciales propias. Te recomendamos leer estas condiciones con detenimiento.
         </p>
 
         {/* Sección 1 */}
@@ -26,12 +26,12 @@ export default function PrivacidadPage() {
 
         <h5 className="fw-bold mt-3" style={{ color: '#1a1a1a' }}>1.1.</h5>
         <p style={{ color: '#555', lineHeight: 1.8 }}>
-          INFOSOCIO.com.ar (en adelante "INFOSOCIO"), pone a disposición de los usuarios (en adelante, "Usuarios") su plataforma web (en adelante, "la Plataforma"), sujeto al cumplimiento de los presentes Términos y Condiciones.
+          BUSCADATA.com.ar (en adelante "BUSCADATA"), pone a disposición de los usuarios (en adelante, "Usuarios") su plataforma web (en adelante, "la Plataforma"), sujeto al cumplimiento de los presentes Términos y Condiciones.
         </p>
 
         <h5 className="fw-bold mt-3" style={{ color: '#1a1a1a' }}>1.2.</h5>
         <p style={{ color: '#555', lineHeight: 1.8 }}>
-          El Usuario acepta que INFOSOCIO es un prestador intermediario que gestiona la adquisición de informes comerciales provistos por una empresa tercera licenciada. Al aceptar estos Términos, el Usuario reconoce que cualquier acceso o uso de los servicios se realiza en conformidad con las disposiciones aquí establecidas y bajo las políticas del proveedor final del servicio.
+          El Usuario acepta que BUSCADATA es un prestador intermediario que gestiona la adquisición de informes comerciales provistos por una empresa tercera licenciada. Al aceptar estos Términos, el Usuario reconoce que cualquier acceso o uso de los servicios se realiza en conformidad con las disposiciones aquí establecidas y bajo las políticas del proveedor final del servicio.
         </p>
 
         <h5 className="fw-bold mt-3" style={{ color: '#1a1a1a' }}>1.3.</h5>
@@ -46,17 +46,17 @@ export default function PrivacidadPage() {
 
         <h5 className="fw-bold mt-3" style={{ color: '#1a1a1a' }}>2.1.</h5>
         <p style={{ color: '#555', lineHeight: 1.8 }}>
-          El Usuario declara conocer y aceptar que INFOSOCIO no cuenta con bases de datos propias, ni almacena, procesa, genera o modifica registros de información crediticia, comercial o financiera. INFOSOCIO actúa únicamente como un canal de venta y distribución de informes generados por una empresa tercera.
+          El Usuario declara conocer y aceptar que BUSCADATA no cuenta con bases de datos propias, ni almacena, procesa, genera o modifica registros de información crediticia, comercial o financiera. BUSCADATA actúa únicamente como un canal de venta y distribución de informes generados por una empresa tercera.
         </p>
 
         <h5 className="fw-bold mt-3" style={{ color: '#1a1a1a' }}>2.2.</h5>
         <p style={{ color: '#555', lineHeight: 1.8 }}>
-          INFOSOCIO no asume responsabilidad alguna por la exactitud, veracidad, vigencia, desactualización o errores materiales que pudieran contener los informes comerciales entregados, ya que los mismos provienen íntegramente de los registros del proveedor tercero y de sus fuentes de información.
+          BUSCADATA no asume responsabilidad alguna por la exactitud, veracidad, vigencia, desactualización o errores materiales que pudieran contener los informes comerciales entregados, ya que los mismos provienen íntegramente de los registros del proveedor tercero y de sus fuentes de información.
         </p>
 
         <h5 className="fw-bold mt-3" style={{ color: '#1a1a1a' }}>2.3.</h5>
         <p style={{ color: '#555', lineHeight: 1.8 }}>
-          INFOSOCIO no garantiza la disponibilidad técnica ininterrumpida de la Plataforma, eximiéndose de responsabilidad por daños directos o indirectos, lucro cesante o pérdida de chance derivados de fallas en los servidores del hosting o en los sistemas informáticos de la empresa proveedora de los datos.
+          BUSCADATA no garantiza la disponibilidad técnica ininterrumpida de la Plataforma, eximiéndose de responsabilidad por daños directos o indirectos, lucro cesante o pérdida de chance derivados de fallas en los servidores del hosting o en los sistemas informáticos de la empresa proveedora de los datos.
         </p>
 
         <hr className="my-5" />
@@ -71,12 +71,12 @@ export default function PrivacidadPage() {
 
         <h5 className="fw-bold mt-3" style={{ color: '#1a1a1a' }}>3.2.</h5>
         <p style={{ color: '#555', lineHeight: 1.8 }}>
-          No obstante, en virtud de que INFOSOCIO no posee ni administra bases de datos crediticias, cualquier solicitud de rectificación, actualización, supresión o ejercicio del "Derecho al Olvido" (Artículo 26) deberá ser canalizada directamente ante la empresa tercera titular de la base de datos o ante las fuentes originarias de la información.
+          No obstante, en virtud de que BUSCADATA no posee ni administra bases de datos crediticias, cualquier solicitud de rectificación, actualización, supresión o ejercicio del "Derecho al Olvido" (Artículo 26) deberá ser canalizada directamente ante la empresa tercera titular de la base de datos o ante las fuentes originarias de la información.
         </p>
 
         <h5 className="fw-bold mt-3" style={{ color: '#1a1a1a' }}>3.3.</h5>
         <p style={{ color: '#555', lineHeight: 1.8 }}>
-          INFOSOCIO brindará al Usuario la información del proveedor tercero cuando sea requerida a través de <a href="mailto:administracion@infosocio.com.ar" style={{ color: '#b71c1c' }}>administracion@infosocio.com.ar</a> para que este pueda ejercer sus derechos ante quien corresponda legalmente.
+          BUSCADATA brindará al Usuario la información del proveedor tercero cuando sea requerida a través de <a href="mailto:administracion@buscadata.com.ar" style={{ color: '#1b5e20' }}>administracion@buscadata.com.ar</a> para que este pueda ejercer sus derechos ante quien corresponda legalmente.
         </p>
 
         <hr className="my-5" />
@@ -96,7 +96,7 @@ export default function PrivacidadPage() {
 
         <h5 className="fw-bold mt-3" style={{ color: '#1a1a1a' }}>5.1.</h5>
         <p style={{ color: '#555', lineHeight: 1.8 }}>
-          Todos los derechos de propiedad intelectual sobre el diseño de la Plataforma, logos, interfaces y textos pertenecen a INFOSOCIO o a sus respectivos licenciantes. Los derechos sobre las marcas y la estructura de los informes pertenecen a la empresa tercera proveedora del servicio. Su uso no autorizado está prohibido.
+          Todos los derechos de propiedad intelectual sobre el diseño de la Plataforma, logos, interfaces y textos pertenecen a BUSCADATA o a sus respectivos licenciantes. Los derechos sobre las marcas y la estructura de los informes pertenecen a la empresa tercera proveedora del servicio. Su uso no autorizado está prohibido.
         </p>
 
         <hr className="my-5" />
@@ -111,7 +111,7 @@ export default function PrivacidadPage() {
 
         <h5 className="fw-bold mt-3" style={{ color: '#1a1a1a' }}>6.2.</h5>
         <p style={{ color: '#555', lineHeight: 1.8 }}>
-          Las solicitudes de revisión por errores visuales del archivo o fallas en la entrega deberán enviarse dentro de las 24 horas de realizada la compra a <a href="mailto:administracion@infosocio.com.ar" style={{ color: '#b71c1c' }}>administracion@infosocio.com.ar</a>. Al no ser INFOSOCIO el emisor original de los datos, cualquier reclamo por disconformidad en el contenido del informe será trasladado al proveedor tercero para su evaluación, sin que esto garantice un reembolso por parte de INFOSOCIO.
+          Las solicitudes de revisión por errores visuales del archivo o fallas en la entrega deberán enviarse dentro de las 24 horas de realizada la compra a <a href="mailto:administracion@buscadata.com.ar" style={{ color: '#1b5e20' }}>administracion@buscadata.com.ar</a>. Al no ser BUSCADATA el emisor original de los datos, cualquier reclamo por disconformidad en el contenido del informe será trasladado al proveedor tercero para su evaluación, sin que esto garantice un reembolso por parte de BUSCADATA.
         </p>
 
         <hr className="my-5" />
@@ -127,13 +127,13 @@ export default function PrivacidadPage() {
         <hr className="my-5" />
 
         {/* Políticas de Privacidad */}
-        <h2 className="fw-bold mb-4" style={{ fontSize: '1.5rem', color: '#b71c1c' }}>POLÍTICAS DE PRIVACIDAD - INFOSOCIO.COM.AR</h2>
+        <h2 className="fw-bold mb-4" style={{ fontSize: '1.5rem', color: '#1b5e20' }}>POLÍTICAS DE PRIVACIDAD - BUSCADATA.COM.AR</h2>
 
         <h3 className="fw-bold mt-4" style={{ fontSize: '1.2rem', color: '#1a1a1a' }}>1. Ámbito de Aplicación</h3>
 
         <h5 className="fw-bold mt-3" style={{ color: '#1a1a1a' }}>1.1.</h5>
         <p style={{ color: '#555', lineHeight: 1.8 }}>
-          La presente Política de Privacidad describe cómo INFOSOCIO trata la información técnica y de contacto que recolecta a través de su sitio web www.infosocio.com.ar, en concordancia con la Ley 25.326 de Protección de Datos Personales de Argentina.
+          La presente Política de Privacidad describe cómo BUSCADATA trata la información técnica y de contacto que recolecta a través de su sitio web www.buscadata.com.ar, en concordancia con la Ley 25.326 de Protección de Datos Personales de Argentina.
         </p>
 
         <hr className="my-5" />
@@ -142,12 +142,12 @@ export default function PrivacidadPage() {
 
         <h5 className="fw-bold mt-3" style={{ color: '#1a1a1a' }}>2.1.</h5>
         <p style={{ color: '#555', lineHeight: 1.8 }}>
-          INFOSOCIO únicamente solicita al Usuario datos de contacto y facturación (como nombre, correo electrónico, teléfono y datos de pago) con el único fin de procesar la solicitud del informe comercial y enviar el comprobante correspondiente.
+          BUSCADATA únicamente solicita al Usuario datos de contacto y facturación (como nombre, correo electrónico, teléfono y datos de pago) con el único fin de procesar la solicitud del informe comercial y enviar el comprobante correspondiente.
         </p>
 
         <h5 className="fw-bold mt-3" style={{ color: '#1a1a1a' }}>2.2.</h5>
         <p style={{ color: '#555', lineHeight: 1.8 }}>
-          INFOSOCIO no recolecta, no almacena en servidores propios, ni procesa antecedentes comerciales, deudas, perfiles crediticios ni datos sensibles de los Usuarios ni de terceros. Toda la información que se consulta a través de la plataforma es transmitida de forma encriptada y directa desde los servidores de la empresa tercera proveedora del servicio.
+          BUSCADATA no recolecta, no almacena en servidores propios, ni procesa antecedentes comerciales, deudas, perfiles crediticios ni datos sensibles de los Usuarios ni de terceros. Toda la información que se consulta a través de la plataforma es transmitida de forma encriptada y directa desde los servidores de la empresa tercera proveedora del servicio.
         </p>
 
         <hr className="my-5" />
@@ -161,7 +161,7 @@ export default function PrivacidadPage() {
         <ul style={{ color: '#555', lineHeight: 1.8, paddingLeft: '1.5rem' }}>
           <li>Gestionar el procesamiento del pedido ante el proveedor tercero.</li>
           <li>Enviar el informe digitalizado al correo electrónico del Usuario.</li>
-          <li>Responder a consultas de soporte técnico o reclamos administrativos a través de administracion@infosocio.com.ar.</li>
+          <li>Responder a consultas de soporte técnico o reclamos administrativos a través de administracion@buscadata.com.ar.</li>
         </ul>
 
         <hr className="my-5" />
@@ -170,7 +170,7 @@ export default function PrivacidadPage() {
 
         <h5 className="fw-bold mt-3" style={{ color: '#1a1a1a' }}>4.1.</h5>
         <p style={{ color: '#555', lineHeight: 1.8 }}>
-          Para poder cumplir con el servicio solicitado, el Usuario acepta y autoriza expresamente a INFOSOCIO a transmitir los criterios de búsqueda (DNI/CUIT del perfil consultado) a la empresa tercera encargada de emitir los informes comerciales. INFOSOCIO no vende, alquila ni comparte los datos de contacto de sus Usuarios con fines publicitarios ajenos al sitio.
+          Para poder cumplir con el servicio solicitado, el Usuario acepta y autoriza expresamente a BUSCADATA a transmitir los criterios de búsqueda (DNI/CUIT del perfil consultado) a la empresa tercera encargada de emitir los informes comerciales. BUSCADATA no vende, alquila ni comparte los datos de contacto de sus Usuarios con fines publicitarios ajenos al sitio.
         </p>
 
         <hr className="my-5" />
@@ -179,7 +179,7 @@ export default function PrivacidadPage() {
 
         <h5 className="fw-bold mt-3" style={{ color: '#1a1a1a' }}>5.1.</h5>
         <p style={{ color: '#555', lineHeight: 1.8 }}>
-          INFOSOCIO cuenta con certificados de seguridad SSL (navegación encriptada) y adopta las medidas técnicas disponibles en su hosting para proteger los datos de contacto de los Usuarios contra accesos no autorizados. Sin embargo, INFOSOCIO no se hace responsable por las brechas de seguridad que pudieran sufrir las plataformas de pago externas o los servidores de la empresa tercera proveedora de los informes.
+          BUSCADATA cuenta con certificados de seguridad SSL (navegación encriptada) y adopta las medidas técnicas disponibles en su hosting para proteger los datos de contacto de los Usuarios contra accesos no autorizados. Sin embargo, BUSCADATA no se hace responsable por las brechas de seguridad que pudieran sufrir las plataformas de pago externas o los servidores de la empresa tercera proveedora de los informes.
         </p>
 
         <hr className="my-5" />
@@ -197,7 +197,7 @@ export default function PrivacidadPage() {
 
         <h5 className="fw-bold mt-3" style={{ color: '#1a1a1a' }}>7.1.</h5>
         <p style={{ color: '#555', lineHeight: 1.8 }}>
-          INFOSOCIO se reserva el derecho de modificar esta Política de Privacidad en cualquier momento para adaptarla a cambios legislativos o novedades en la intermediación del servicio. La versión vigente estará siempre publicada en esta sección.
+          BUSCADATA se reserva el derecho de modificar esta Política de Privacidad en cualquier momento para adaptarla a cambios legislativos o novedades en la intermediación del servicio. La versión vigente estará siempre publicada en esta sección.
         </p>
 
         <p className="mt-5 pt-3" style={{ color: '#888', fontStyle: 'italic', borderTop: '1px solid #eee' }}>

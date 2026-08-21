@@ -1,9 +1,17 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
+import isologo from '../assets/images/isologo.svg'
 
-export default function SearchBar({ large = false }) {
+export default function SearchBar({ large = false, autoFocus = false }) {
   const [query, setQuery] = useState('')
   const navigate = useNavigate()
+  const inputRef = useRef(null)
+
+  useEffect(() => {
+    if (autoFocus && inputRef.current) {
+      inputRef.current.focus()
+    }
+  }, [autoFocus])
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -14,16 +22,17 @@ export default function SearchBar({ large = false }) {
 
   return (
     <form onSubmit={handleSubmit} className={`search-container ${large ? 'mx-auto' : ''}`}>
-      <div className="input-group input-group-lg">
+      <div className="search-field-group">
         <input
+          ref={inputRef}
           type="text"
           className="form-control"
-          placeholder={large ? "Buscar por Nombre, DNI o CUIL..." : "Nombre, DNI o CUIL..."}
+          placeholder="Ingresa tu busqueda"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />
-        <button className="btn btn-dark fw-bold px-4" type="submit">
-          Buscar
+        <button className="search-btn" type="submit" aria-label="Buscar">
+          <img src={isologo} alt="" className="search-btn-logo" />
         </button>
       </div>
     </form>

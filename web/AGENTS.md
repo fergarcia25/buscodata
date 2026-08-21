@@ -1,32 +1,34 @@
-# Web — InfoSocio
+# Web — Busca Data
 
 ## Stack
 - React 19 + Vite 8 + Bootstrap 5 + SASS
 
 ## Base path
-`base: '/web/'` — the app lives at `http://infosocio.test/web/`.
+`base: '/web/'` — the app lives at `http://buscadata.test/web/`.
 
 ## Dev
 ```bash
 npm run dev        # http://localhost:5173/web/
-npm run build      # Build to /dist → served by Laragon at http://infosocio.test/web/
+npm run build      # Build to /dist → served by Laragon at http://buscadata.test/web/
 ```
 
 ## Proxy (Vite)
-Redirects `/admin/api/...` to `http://localhost/infosocio/admin/api/` (Laragon).
+Redirects `/admin/api/...` to `http://localhost/admin/api/...` (Laragon).
 
 ## Pages
 | Route | File |
 |---|---|
 | `/` | HomePage — hero + search + services + about |
-| `/nosotros` | AboutPage |
+| `/buscadatatarget` | AboutPage |
+| `/infoboost` | InfoboostPage |
 | `/servicios` | ServicesPage |
 | `/resultados?q=...` | ResultsPage (static results) |
-| `/solicitar?userId=X` | SolicitarPage (request form) |
+| `/solicitar/:id` | SolicitarPage (request form) |
 
 ## Design
-- Red tones (`#b71c1c`, `#c62828`) — no blue.
-- Search button: dark background (`btn-dark`), white text.
+- Light theme: white background with gradient to light gray (`$body-bg-start`, `$body-bg-end`).
+- Green tones (`#1b5e20`, `#2e7d32`) — no blue, no red.
+- Search button: icon-only, shows the logo isologo (`src/assets/images/isologo.svg`), separated from the input (`.search-btn`).
 - Bootstrap SASS deprecation warnings are harmless.
 
 ## Search behavior (static)

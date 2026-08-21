@@ -1,20 +1,25 @@
 // Colores
-$primary: #c62828;
+$primary: #2e7d32;
 $secondary: #6c757d;
 $success: #198754;
 $info: #0dcaf0;
 $warning: #ffc107;
 $danger: #dc3545;
 
-$custom-primary: #b71c1c;
+$custom-primary: #1b5e20;
+$custom-primary-light: #2e7d32;
 $custom-accent: #ff6f00;
+
+// Tema light
+$body-bg-start: #ffffff;
+$body-bg-end: #ececec;
 
 // Tipografía
 $font-family-base: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 // Layout
 $header-height: 80px;
-$footer-bg: #b71c1c;
+$footer-bg: #1b5e20;
 
 // Import Bootstrap
 @import "bootstrap/scss/bootstrap";

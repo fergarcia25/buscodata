@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import SearchBar from '../components/SearchBar'
 import { Link } from 'react-router-dom'
 
@@ -13,114 +13,78 @@ const plans = [
   { id: 8, title: 'Perfil Fiscal y Comercial', description: 'Detalle de inscripción como Monotributista o Autónomo. Participación en sociedades y registro de cheques rechazados.', icon: 'bi-clipboard-data', popular: false, highlight: true },
 ]
 
-const sliderItems = [
-  { title: 'Datos Personales', icon: 'bi-person-vcard' },
-  { title: 'Scoring', icon: 'bi-graph-up-arrow' },
-  { title: 'Domicilios, Contactos, Gmails', icon: 'bi-geo-alt' },
-  { title: 'Vínculos y Familiares', icon: 'bi-diagram-3' },
-  { title: 'Historial laboral e ingresos', icon: 'bi-briefcase' },
-  { title: 'Historial de vehículos', icon: 'bi-truck' },
-  { title: 'Situación financiera', icon: 'bi-bank' },
-  { title: 'Perfil Fiscal y Comercial', icon: 'bi-clipboard-data' },
-]
+const TITLE_LEAD = 'Obtené el informe '
+const TITLE_ACCENT = 'más completo del mercado.'
+const HERO_SUB = 'Buscá por Nombre, Apellido, DNI ó CUIL y solicitá tu informe en minutos.'
 
 export default function HomePage() {
-  const CARD_WIDTH = 228
-  const items = [...sliderItems, ...sliderItems]
-  const totalSlides = sliderItems.length
+  const reduceMotion = useMemo(
+    () => window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+    []
+  )
 
-  const getGap = () => {
-    if (window.innerWidth >= 992) return 24
-    if (window.innerWidth >= 768) return 16
-    return 12
-  }
-
-  const [offset, setOffset] = useState(0)
-  const [gap, setGap] = useState(getGap)
-  const [dotIndex, setDotIndex] = useState(0)
-  const transitionRef = useRef(true)
+  const [leadCount, setLeadCount] = useState(reduceMotion ? TITLE_LEAD.length : 0)
+  const [accentCount, setAccentCount] = useState(reduceMotion ? TITLE_ACCENT.length : 0)
+  const [subCount, setSubCount] = useState(reduceMotion ? HERO_SUB.length : 0)
 
   useEffect(() => {
-    const onResize = () => setGap(getGap())
-    window.addEventListener('resize', onResize)
-    return () => window.removeEventListener('resize', onResize)
-  }, [])
+    if (leadCount >= TITLE_LEAD.length) return
+    const timer = setTimeout(() => setLeadCount((c) => c + 1), 25)
+    return () => clearTimeout(timer)
+  }, [leadCount])
 
   useEffect(() => {
-    const step = CARD_WIDTH + gap
-    const timer = setInterval(() => {
-      setDotIndex((prev) => (prev + 1) % totalSlides)
-      setOffset((prev) => {
-        const next = prev + step
-        if (next >= totalSlides * step) {
-          transitionRef.current = false
-          return 0
-        }
-        transitionRef.current = true
-        return next
-      })
-    }, 1000)
-    return () => clearInterval(timer)
-  }, [gap, totalSlides])
+    if (leadCount < TITLE_LEAD.length || accentCount >= TITLE_ACCENT.length) return
+    const timer = setTimeout(() => setAccentCount((c) => c + 1), 25)
+    return () => clearTimeout(timer)
+  }, [accentCount, leadCount])
+
+  useEffect(() => {
+    if (accentCount < TITLE_ACCENT.length || subCount >= HERO_SUB.length) return
+    const timer = setTimeout(() => setSubCount((c) => c + 1), 10)
+    return () => clearTimeout(timer)
+  }, [subCount, accentCount])
+
+  const titleTyping = leadCount < TITLE_LEAD.length || accentCount < TITLE_ACCENT.length
+  const showSearch = reduceMotion || subCount >= HERO_SUB.length
 
   return (
     <>
       <section className="about-hero home-hero">
         <div className="about-hero-bg" />
-        <div className="container position-relative d-flex align-items-center" style={{ zIndex: 1, flex: 1, minHeight: 0 }}>
-          <div className="row align-items-center w-100">
-            <div className="col-lg-8">
-              <h1 className="about-hero-title">
-                Información estratégica para <span className="text-gradient">tomar decisiones seguras</span>
-              </h1>
-              <p className="about-hero-sub">
-                Buscá por Nombre y Apellido, DNI o CUIL y obtené el informe más completo de Argentina.
-              </p>
-              <div className="mt-4 mb-3">
-                <SearchBar large />
+        <div className="home-hero-visual" aria-hidden="true">
+          <div className="about-circle about-circle-1" />
+          <div className="about-circle about-circle-2" />
+          <div className="about-circle about-circle-3" />
+        </div>
+        <div className="container position-relative d-flex align-items-center justify-content-center" style={{ zIndex: 1, flex: 1, minHeight: 0 }}>
+          <div className="home-hero-content text-center">
+            <h1 className="about-hero-title">
+              {TITLE_LEAD.slice(0, leadCount)}
+              {accentCount > 0 && <br />}
+              <span className="text-gradient">{TITLE_ACCENT.slice(0, accentCount)}</span>
+              {titleTyping && <span className="type-caret" aria-hidden="true" />}
+            </h1>
+            <p className="about-hero-sub mx-auto">
+              {HERO_SUB.slice(0, subCount)}
+              {!titleTyping && subCount > 0 && subCount < HERO_SUB.length && <span className="type-caret" aria-hidden="true" />}
+            </p>
+            {showSearch && (
+              <div className="hero-search-reveal">
+                <SearchBar large autoFocus />
               </div>
-            </div>
-            <div className="col-lg-4 d-none d-lg-block">
-              <div className="about-hero-visual">
-                <div className="about-circle about-circle-1" />
-                <div className="about-circle about-circle-2" />
-                <div className="about-circle about-circle-3" />
-               
-              </div>
-            </div>
+            )}
           </div>
         </div>
 
-        {/* Slider - full width outside container */}
-        <div className="home-slider">
-          <div
-            className="home-slider-track"
-            style={{
-              transform: `translateX(-${offset}px)`,
-              transition: transitionRef.current ? 'transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)' : 'none',
-            }}
-          >
-            {items.map((item, i) => (
-              <div key={i} className="home-slide">
-                <div className="home-slide-card">
-                  <div className="home-slide-icon"><i className={`bi ${item.icon} text-gradient`}></i></div>
-                  <h3 className="home-slide-title">{item.title}</h3>
-                </div>
-              </div>
-            ))}
+        {showSearch && (
+          <div className="home-hero-actions">
+            <a href="#contenido-informe" className="about-btn-outline home-hero-action-reveal">Conocer más</a>
           </div>
-        </div>
-        <div className="home-slider-dots">
-          {sliderItems.map((_, i) => (
-            <span
-              key={i}
-                className={`home-slider-dot ${i === dotIndex ? 'active' : ''}`}
-            />
-          ))}
-        </div>
+        )}
       </section>
 
-      {/* Planes y servicios */}
+      {/* Planes y servicios 
       <section className="about-plans-section" style={{ backgroundColor: '#f2f2f2' }}>
         <div className="container">
           <div className="text-center mb-5">
@@ -142,25 +106,25 @@ export default function HomePage() {
             </div>
             <div className="col-md-6 col-lg-5">
               <div className="about-feat-card">
-                <h3 className="fw-bold text-gradient">Infosocio Target</h3>
+                <h3 className="fw-bold text-gradient">BuscaData Target</h3>
                 <p style={{ marginBottom: '1.5rem' }}>
                   Mediante tecnología Big Data analizamos millones de señales digitales para construir bases de datos de potenciales clientes altamente calificados.
                 </p>
-                <Link to="/infosociotarget" className="about-btn-primary">Ver Infosocio Target</Link>
+                <Link to="/buscadatatarget" className="about-btn-primary">Ver BuscaData Target</Link>
               </div>
             </div>
           </div>
         </div>
       </section>
-
+*/}
       {/* Services section */}
-      <section className="about-benefits-section">
+      <section id="contenido-informe" className="about-benefits-section">
         <div className="container">
           <div className="text-center mb-5">
-            <h2 className="about-title" style={{ color: '#fff' }}>¿Que contiene el informe?</h2>
-            <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '1.1rem' }}>En el informe podrás conocer la siguiente información de la persona.</p>
+            <h2 className="about-title" style={{ color: '#1a1a1a' }}>¿Que contiene el informe?</h2>
+            <p style={{ color: '#666', fontSize: '1.1rem' }}>En el informe podrás conocer la siguiente información de la persona.</p>
           </div>
-          <div className="about-benefits-grid">
+          <div className="about-benefits-grid about-benefits-grid-2">
             {plans.map((plan) => (
               <div key={plan.id} className="about-benefit-card">
                 <i className={`bi ${plan.icon}`} />
@@ -173,12 +137,12 @@ export default function HomePage() {
       </section>
 
       {/* About section */}
-      <section className="about-section">
+      <section id="que-es-buscadata" className="about-section">
         <div className="container">
           <div className="row g-5 align-items-center">
             <div className="col-lg-6">
               <div className="about-label">SOBRE NOSOTROS</div>
-              <h2 className="about-title">InfoSocio</h2>
+              <h2 className="about-title">Busca Data</h2>
               <p className="about-text">
                 Somos una plataforma especializada en la generación de informes personalizados.
                 Nuestro objetivo es brindarte información confiable y detallada de manera rápida y sencilla.
@@ -187,7 +151,7 @@ export default function HomePage() {
                 Con años de experiencia en el rubro, garantizamos datos precisos y actualizados
                 para que puedas tomar las mejores decisiones.
               </p>
-              <Link to="/infosociotarget" className="about-btn-primary mt-3 d-inline-flex">Conocé más</Link>
+              <Link to="/buscadatatarget" className="about-btn-primary mt-3 d-inline-flex">Conocé más</Link>
             </div>
             <div className="col-lg-6">
               <div className="home-about-card">
@@ -196,32 +160,32 @@ export default function HomePage() {
                   <span>Descubrí todo lo que hacemos</span>
                 </div>
                 <div className="home-about-list">
-                  <Link to="/infosociotarget#funcionalidades" className="home-about-item">
+                  <Link to="/buscadatatarget#funcionalidades" className="home-about-item">
                     <i className="bi bi-bullseye"></i>
-                    <span>Infosocio Target</span>
+                    <span>BuscaData Target</span>
                     <i className="bi bi-chevron-right"></i>
                   </Link>
-                  <Link to="/infosociotarget" className="home-about-item">
+                  <Link to="/buscadatatarget" className="home-about-item">
                     <i className="bi bi-arrow-repeat"></i>
                     <span>Transformamos datos complejos en decisiones estratégicas</span>
                     <i className="bi bi-chevron-right"></i>
                   </Link>
-                  <Link to="/infosociotarget#funcionalidades" className="home-about-item">
+                  <Link to="/buscadatatarget#funcionalidades" className="home-about-item">
                     <i className="bi bi-grid-3x3-gap"></i>
                     <span>Todo lo que necesitás para encontrar a tus clientes</span>
                     <i className="bi bi-chevron-right"></i>
                   </Link>
-                  <Link to="/infosociotarget" className="home-about-item">
+                  <Link to="/buscadatatarget" className="home-about-item">
                     <i className="bi bi-people"></i>
                     <span>Para equipos de Marketing y Ventas</span>
                     <i className="bi bi-chevron-right"></i>
                   </Link>
-                  <Link to="/infosociotarget" className="home-about-item">
+                  <Link to="/buscadatatarget" className="home-about-item">
                     <i className="bi bi-signpost-2"></i>
                     <span>El camino hacia tu base de datos ideal</span>
                     <i className="bi bi-chevron-right"></i>
                   </Link>
-                  <Link to="/infosociotarget" className="home-about-item">
+                  <Link to="/buscadatatarget" className="home-about-item">
                     <i className="bi bi-rocket-takeoff"></i>
                     <span>Impulsá el rendimiento de tu negocio hoy mismo</span>
                     <i className="bi bi-chevron-right"></i>

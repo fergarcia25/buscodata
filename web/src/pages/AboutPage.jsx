@@ -7,7 +7,7 @@ export default function AboutPage() {
         <div className="container position-relative" style={{ zIndex: 1 }}>
           <div className="row align-items-center min-vh-80">
             <div className="col-lg-7">
-              <span className="about-tag">Infosocio Target</span>
+              <span className="about-tag">BuscaData Target</span>
               <h1 className="about-hero-title">
                 Encontrá a tus próximos clientes con<br />
                 <span className="text-gradient">Inteligencia de la Información</span>
@@ -28,10 +28,10 @@ export default function AboutPage() {
                 <div className="about-hero-card">
                   <div className="d-flex align-items-center gap-2 mb-2">
                     <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#22c55e', display: 'inline-block' }} />
-                    <span style={{ fontSize: '0.8rem', fontWeight: 600, color: '#fff' }}>DATOS EN VIVO</span>
+                    <span style={{ fontSize: '0.8rem', fontWeight: 600, color: '#1a1a1a' }}>DATOS EN VIVO</span>
                   </div>
-                  <div style={{ fontSize: '1.8rem', fontWeight: 800, color: '#fff' }}>12.4M</div>
-                  <div style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.6)' }}>perfiles activos segmentados</div>
+                  <div style={{ fontSize: '1.8rem', fontWeight: 800, color: '#1a1a1a' }}>12.4M</div>
+                  <div style={{ fontSize: '0.85rem', color: '#666' }}>perfiles activos segmentados</div>
                 </div>
               </div>
             </div>
@@ -45,7 +45,7 @@ export default function AboutPage() {
           <div className="row g-5 align-items-center">
             <div className="col-lg-5">
               <div className="about-label">¿QUÉ ES?</div>
-              <h2 className="about-title">Infosocio Target</h2>
+              <h2 className="about-title">BuscaData Target</h2>
               <p className="about-text">
                 Es nuestra solución de inteligencia comercial y segmentación avanzada. Mediante tecnología Big Data, analizamos millones de señales digitales y demográficas para construir bases de datos de potenciales clientes altamente calificados, optimizando tu presupuesto de marketing y el tiempo de tus vendedores.
               </p>
@@ -62,11 +62,11 @@ export default function AboutPage() {
             </div>
             <div className="col-lg-6 offset-lg-1">
               <div className="about-targets">
-                <h3 className="mb-4" style={{ fontSize: '1.1rem', fontWeight: 700, color: '#b71c1c', letterSpacing: '1px' }}>SERVICIO LLAVE EN MANO PENSADO PARA:</h3>
+                <h3 className="mb-4" style={{ fontSize: '1.1rem', fontWeight: 700, color: '#1b5e20', letterSpacing: '1px' }}>SERVICIO LLAVE EN MANO PENSADO PARA:</h3>
                 <div className="about-target-list">
                   <div className="about-target-item">
-                    <div className="about-target-icon" style={{ background: '#fef2f2' }}>
-                      <i className="bi bi-building" style={{ color: '#b71c1c', fontSize: '1.3rem' }} />
+                    <div className="about-target-icon" style={{ background: '#e8f5e9' }}>
+                      <i className="bi bi-building" style={{ color: '#1b5e20', fontSize: '1.3rem' }} />
                     </div>
                     <div>
                       <strong style={{ color: '#1a1a1a' }}>Empresas B2B</strong>
@@ -74,8 +74,8 @@ export default function AboutPage() {
                     </div>
                   </div>
                   <div className="about-target-item">
-                    <div className="about-target-icon" style={{ background: '#fef2f2' }}>
-                      <i className="bi bi-megaphone" style={{ color: '#b71c1c', fontSize: '1.3rem' }} />
+                    <div className="about-target-icon" style={{ background: '#e8f5e9' }}>
+                      <i className="bi bi-megaphone" style={{ color: '#1b5e20', fontSize: '1.3rem' }} />
                     </div>
                     <div>
                       <strong style={{ color: '#1a1a1a' }}>Agencias de Marketing</strong>
@@ -83,8 +83,8 @@ export default function AboutPage() {
                     </div>
                   </div>
                   <div className="about-target-item">
-                    <div className="about-target-icon" style={{ background: '#fef2f2' }}>
-                      <i className="bi bi-people" style={{ color: '#b71c1c', fontSize: '1.3rem' }} />
+                    <div className="about-target-icon" style={{ background: '#e8f5e9' }}>
+                      <i className="bi bi-people" style={{ color: '#1b5e20', fontSize: '1.3rem' }} />
                     </div>
                     <div>
                       <strong style={{ color: '#1a1a1a' }}>Equipos Comerciales</strong>
@@ -103,9 +103,9 @@ export default function AboutPage() {
         <div className="container position-relative">
           <div className="row justify-content-center">
             <div className="col-lg-10 text-center">
-              <span className="about-label" style={{ color: '#b71c1c' }}>NUESTRO ENFOQUE</span>
-              <h2 className="about-title" style={{ color: '#fff' }}>Transformamos datos complejos en decisiones estratégicas</h2>
-              <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1.1rem', maxWidth: 700, margin: '0 auto' }}>
+              <span className="about-label" style={{ color: '#1b5e20' }}>NUESTRO ENFOQUE</span>
+              <h2 className="about-title" style={{ color: '#1a1a1a' }}>Transformamos datos complejos en decisiones estratégicas</h2>
+              <p style={{ color: '#555', fontSize: '1.1rem', maxWidth: 700, margin: '0 auto' }}>
                 Olvidate de integraciones complejas o desarrollos propios. Nosotros nos encargamos de extraer y filtrar la información exacta que tu negocio necesita.
               </p>
             </div>
@@ -117,7 +117,7 @@ export default function AboutPage() {
               <p>Millones de señales digitales y demográficas de fuentes verificadas.</p>
             </div>
             <div className="about-transform-arrow">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#b71c1c" strokeWidth="2">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#1b5e20" strokeWidth="2">
                 <path d="M5 12h14M13 5l7 7-7 7" />
               </svg>
             </div>
@@ -127,7 +127,7 @@ export default function AboutPage() {
               <p>Aplicamos segmentación avanzada según los parámetros de tu negocio.</p>
             </div>
             <div className="about-transform-arrow">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#b71c1c" strokeWidth="2">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#1b5e20" strokeWidth="2">
                 <path d="M5 12h14M13 5l7 7-7 7" />
               </svg>
             </div>
@@ -198,8 +198,8 @@ export default function AboutPage() {
       <section className="about-benefits-section">
         <div className="container">
           <div className="text-center mb-5">
-            <span className="about-label" style={{ color: '#b71c1c' }}>BENEFICIOS</span>
-            <h2 className="about-title" style={{ color: '#fff' }}>Para equipos de Marketing y Ventas</h2>
+            <span className="about-label" style={{ color: '#1b5e20' }}>BENEFICIOS</span>
+            <h2 className="about-title" style={{ color: '#1a1a1a' }}>Para equipos de Marketing y Ventas</h2>
           </div>
           <div className="about-benefits-grid">
             <div className="about-benefit-card">
@@ -268,8 +268,8 @@ export default function AboutPage() {
       {/* CTA */}
       <section className="about-cta-section">
         <div className="container text-center position-relative" style={{ zIndex: 1 }}>
-          <h2 className="about-title" style={{ color: '#fff' }}>Impulsá el rendimiento de tu negocio hoy mismo</h2>
-          <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1.1rem', maxWidth: 600, margin: '0 auto 2rem' }}>
+          <h2 className="about-title" style={{ color: '#1a1a1a' }}>Impulsá el rendimiento de tu negocio hoy mismo</h2>
+          <p style={{ color: '#555', fontSize: '1.1rem', maxWidth: 600, margin: '0 auto 2rem' }}>
             Decinos a quién querés venderle y nosotros te ayudamos a encontrarlo.
           </p>
           <a href="#contacto" className="about-btn-primary">Solicitar información</a>

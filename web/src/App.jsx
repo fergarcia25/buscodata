@@ -14,7 +14,7 @@ export default function App() {
     <Routes>
       <Route element={<Layout />}>
         <Route path="/" element={<HomePage />} />
-        <Route path="/infosociotarget" element={<AboutPage />} />
+        <Route path="/buscadatatarget" element={<AboutPage />} />
         <Route path="/infoboost" element={<InfoboostPage />} />
         <Route path="/servicios" element={<ServicesPage />} />
         <Route path="/resultados" element={<ResultsPage />} />

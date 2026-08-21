@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link, NavLink, useNavigate } from 'react-router-dom'
-import logo from '../assets/images/logo-full.png'
+import logo from '../assets/images/logo-full.svg'
 
 export default function Header() {
   const [query, setQuery] = useState('')
@@ -28,7 +28,7 @@ export default function Header() {
         <NavLink className="nav-link" to="/infoboost" onClick={handleNavClick}>InfoBoost</NavLink>
       </li>
       <li className="nav-item">
-        <NavLink className="nav-link" to="/infosociotarget" onClick={handleNavClick}>Infosocio Target</NavLink>
+        <NavLink className="nav-link" to="/buscadatatarget" onClick={handleNavClick}>BuscaData Target</NavLink>
       </li>
     </>
   )
@@ -55,7 +55,7 @@ export default function Header() {
       <nav className="container d-flex mx-auto navbar navbar-expand-lg">
         <div className="container-fluid px-0">
           <Link className="navbar-brand" to="/">
-            <img src={logo} alt="InfoSocio" height="52" />
+            <img src={logo} alt="Busca Data" height="52" />
           </Link>
           <button className="navbar-toggler" type="button" onClick={() => setMenuOpen(true)}>
             <span className="navbar-toggler-icon"></span>
@@ -64,7 +64,7 @@ export default function Header() {
           <div className={`nav-offcanvas ${menuOpen ? 'open' : ''}`}>
             <div className="nav-offcanvas-header">
               <Link className="navbar-brand" to="/" onClick={handleNavClick}>
-                <img src={logo} alt="InfoSocio" height="52" />
+                <img src={logo} alt="Busca Data" height="52" />
               </Link>
               <button className="nav-close-btn" onClick={() => setMenuOpen(false)}>
                 <i className="bi bi-x-lg"></i>
