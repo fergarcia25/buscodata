@@ -14,6 +14,8 @@ export default function Footer() {
           <div className="col-lg-4">
             <h5 className="fw-bold mb-3">Enlaces</h5>
             <ul className="list-unstyled">
+              <li className="mb-2"><Link to="/informe" className="text-white-50 text-decoration-none">Qué contiene el informe</Link></li>
+              <li className="mb-2"><Link to="/nosotros" className="text-white-50 text-decoration-none">Sobre Nosotros</Link></li>
               <li className="mb-2"><Link to="/infoboost" className="text-white-50 text-decoration-none">Infoboost</Link></li>
               <li className="mb-2"><Link to="/buscadatatarget" className="text-white-50 text-decoration-none">BuscaData Target</Link></li>
               <li className="mb-2"><Link to="/terminos-y-condiciones" className="text-white-50 text-decoration-none">Términos y Condiciones</Link></li>

@@ -62,11 +62,11 @@ export default function InfoboostPage() {
             </div>
             <div className="col-lg-6 offset-lg-1">
               <div className="about-targets">
-                <h3 className="mb-4" style={{ fontSize: '1.1rem', fontWeight: 700, color: '#1b5e20', letterSpacing: '1px' }}>EL PROCESO ES SIMPLE, RÁPIDO Y EN 3 PASOS:</h3>
+                <h3 className="mb-4" style={{ fontSize: '1.1rem', fontWeight: 700, color: '#007b3b', letterSpacing: '1px' }}>EL PROCESO ES SIMPLE, RÁPIDO Y EN 3 PASOS:</h3>
                 <div className="about-target-list">
                   <div className="about-target-item">
                     <div className="about-target-icon" style={{ background: '#e8f5e9' }}>
-                      <i className="bi bi-upload" style={{ color: '#1b5e20', fontSize: '1.3rem' }} />
+                      <i className="bi bi-upload" style={{ color: '#007b3b', fontSize: '1.3rem' }} />
                     </div>
                     <div>
                       <strong style={{ color: '#1a1a1a' }}>Subís tu base</strong>
@@ -75,7 +75,7 @@ export default function InfoboostPage() {
                   </div>
                   <div className="about-target-item">
                     <div className="about-target-icon" style={{ background: '#e8f5e9' }}>
-                      <i className="bi bi-search" style={{ color: '#1b5e20', fontSize: '1.3rem' }} />
+                      <i className="bi bi-search" style={{ color: '#007b3b', fontSize: '1.3rem' }} />
                     </div>
                     <div>
                       <strong style={{ color: '#1a1a1a' }}>Elegís qué buscar</strong>
@@ -84,7 +84,7 @@ export default function InfoboostPage() {
                   </div>
                   <div className="about-target-item">
                     <div className="about-target-icon" style={{ background: '#e8f5e9' }}>
-                      <i className="bi bi-download" style={{ color: '#1b5e20', fontSize: '1.3rem' }} />
+                      <i className="bi bi-download" style={{ color: '#007b3b', fontSize: '1.3rem' }} />
                     </div>
                     <div>
                       <strong style={{ color: '#1a1a1a' }}>Descargás los resultados</strong>
@@ -103,7 +103,7 @@ export default function InfoboostPage() {
         <div className="container position-relative">
           <div className="row justify-content-center">
             <div className="col-lg-10 text-center">
-              <span className="about-label" style={{ color: '#1b5e20' }}>¿QUÉ INFORMACIÓN OFRECE?</span>
+              <span className="about-label" style={{ color: '#007b3b' }}>¿QUÉ INFORMACIÓN OFRECE?</span>
               <h2 className="about-title" style={{ color: '#1a1a1a' }}>Información estratégica al alcance de un clic</h2>
               <p style={{ color: '#555', fontSize: '1.1rem', maxWidth: 700, margin: '0 auto' }}>
                 Accedé a la base de datos más completa del mercado para tomar decisiones seguras, segmentar campañas o acelerar procesos de cobranza e investigación.
@@ -164,7 +164,7 @@ export default function InfoboostPage() {
       {/* CTA */}
       <section className="about-cta-section">
         <div className="container text-center position-relative" style={{ zIndex: 1 }}>
-          <span className="about-label" style={{ color: '#1b5e20' }}>INFORMACIÓN ESTRATÉGICA</span>
+          <span className="about-label" style={{ color: '#007b3b' }}>INFORMACIÓN ESTRATÉGICA</span>
           <h2 className="about-title" style={{ color: '#1a1a1a' }}>Accedé a la base de datos más completa del mercado</h2>
           <p style={{ color: '#555', fontSize: '1.1rem', maxWidth: 600, margin: '0 auto 2rem' }}>
             Elegí Infoboost y obtené toda la información estratégica en tiempo récord.  Tomá decisiones seguras, segmentá campañas o acelerá procesos de cobranza e investigación.

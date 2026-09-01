@@ -22,7 +22,7 @@ export default function TyCPage() {
 
         <hr className="mb-5" />
 
-        <h2 className="fw-bold mb-4" style={{ fontSize: '1.5rem', color: '#1b5e20' }}>1. Aceptación de los Términos y Condiciones</h2>
+        <h2 className="fw-bold mb-4" style={{ fontSize: '1.5rem', color: '#007b3b' }}>1. Aceptación de los Términos y Condiciones</h2>
 
         <h5 className="fw-bold mt-4" style={{ color: '#1a1a1a' }}>1.1.</h5>
         <p style={{ color: '#555', lineHeight: 1.8 }}>
@@ -44,7 +44,7 @@ export default function TyCPage() {
 
         <hr className="my-5" />
 
-        <h2 className="fw-bold mb-4" style={{ fontSize: '1.5rem', color: '#1b5e20' }}>2. Uso de la Plataforma</h2>
+        <h2 className="fw-bold mb-4" style={{ fontSize: '1.5rem', color: '#007b3b' }}>2. Uso de la Plataforma</h2>
 
         <h5 className="fw-bold mt-4" style={{ color: '#1a1a1a' }}>2.1.</h5>
         <p style={{ color: '#555', lineHeight: 1.8 }}>
@@ -74,14 +74,14 @@ export default function TyCPage() {
 
         <hr className="my-5" />
 
-        <h2 className="fw-bold mb-4" style={{ fontSize: '1.5rem', color: '#1b5e20' }}>3. Registro de Usuario</h2>
+        <h2 className="fw-bold mb-4" style={{ fontSize: '1.5rem', color: '#007b3b' }}>3. Registro de Usuario</h2>
 
         <h5 className="fw-bold mt-4" style={{ color: '#1a1a1a' }}>3.1.</h5>
         <p style={{ color: '#555', lineHeight: 1.8 }}>
           Para acceder a ciertos servicios de la Plataforma, el Usuario deberá completar un proceso de registro proporcionando información veraz y actualizada. En general, el acceso al sitio web de INFOSOCIO es gratuito y no requiere registro previo. Sin embargo, para hacer uso de algunas funcionalidades, el usuario puede necesitar registrarse, creando una cuenta de usuario con un nombre de usuario y una contraseña de acceso para lo cual deberá someterse a un proceso de registro. Durante este proceso, el Usuario se compromete a proporcionar información precisa, veraz, y actualizada, según lo solicitado en los formularios correspondientes. INFOSOCIO se reserva el derecho de verificar la autenticidad de la información proporcionada y tomará medidas adecuadas en caso de detectar datos falsos o desactualizados.
         </p>
         <p style={{ color: '#555', lineHeight: 1.8 }}>
-          El Usuario es responsable de mantener la confidencialidad de su cuenta y de la información asociada a la misma, asumiendo la responsabilidad por todas las actividades que ocurran bajo su cuenta. En caso de detectar el uso no autorizado de la cuenta o cualquier otra vulneración de la seguridad, el Usuario se compromete a notificarlo de inmediato a <a href="mailto:administracion@buscadata.com.ar" style={{ color: '#1b5e20' }}>administracion@buscadata.com.ar</a>.
+          El Usuario es responsable de mantener la confidencialidad de su cuenta y de la información asociada a la misma, asumiendo la responsabilidad por todas las actividades que ocurran bajo su cuenta. En caso de detectar el uso no autorizado de la cuenta o cualquier otra vulneración de la seguridad, el Usuario se compromete a notificarlo de inmediato a <a href="mailto:administracion@buscadata.com.ar" style={{ color: '#007b3b' }}>administracion@buscadata.com.ar</a>.
         </p>
 
         <h5 className="fw-bold mt-4" style={{ color: '#1a1a1a' }}>3.2.</h5>
@@ -91,7 +91,7 @@ export default function TyCPage() {
 
         <hr className="my-5" />
 
-        <h2 className="fw-bold mb-4" style={{ fontSize: '1.5rem', color: '#1b5e20' }}>4. Derechos de los Titulares de Datos Personales</h2>
+        <h2 className="fw-bold mb-4" style={{ fontSize: '1.5rem', color: '#007b3b' }}>4. Derechos de los Titulares de Datos Personales</h2>
 
         <h5 className="fw-bold mt-4" style={{ color: '#1a1a1a' }}>4.1.</h5>
         <p style={{ color: '#555', lineHeight: 1.8 }}>
@@ -108,12 +108,12 @@ export default function TyCPage() {
           Dichos derechos podrán ser ejercidos a través de los mecanismos proporcionados por INFOSOCIO, según lo establecido en la normativa vigente. Para ejercer cualquiera de estos derechos, el Usuario puede utilizar los mecanismos proporcionados por INFOSOCIO. INFOSOCIO se compromete a procesar estas solicitudes en un plazo de 5 (cinco) días hábiles y enviar al Usuario el Informe Comercial actualizado, rectificado o suprimido, según corresponda.
         </p>
         <p style={{ color: '#555', lineHeight: 1.8 }}>
-          Para obtener más información sobre cómo ejercer estos derechos, puede ponerse en contacto con nuestro equipo a través de <a href="mailto:administracion@buscadata.com.ar" style={{ color: '#1b5e20' }}>administracion@buscadata.com.ar</a>.
+          Para obtener más información sobre cómo ejercer estos derechos, puede ponerse en contacto con nuestro equipo a través de <a href="mailto:administracion@buscadata.com.ar" style={{ color: '#007b3b' }}>administracion@buscadata.com.ar</a>.
         </p>
 
         <hr className="my-5" />
 
-        <h2 className="fw-bold mb-4" style={{ fontSize: '1.5rem', color: '#1b5e20' }}>5. Propiedad Intelectual</h2>
+        <h2 className="fw-bold mb-4" style={{ fontSize: '1.5rem', color: '#007b3b' }}>5. Propiedad Intelectual</h2>
 
         <h5 className="fw-bold mt-4" style={{ color: '#1a1a1a' }}>5.1.</h5>
         <p style={{ color: '#555', lineHeight: 1.8 }}>
@@ -127,7 +127,7 @@ export default function TyCPage() {
 
         <hr className="my-5" />
 
-        <h2 className="fw-bold mb-4" style={{ fontSize: '1.5rem', color: '#1b5e20' }}>6. Enlaces a Terceros y Cookies</h2>
+        <h2 className="fw-bold mb-4" style={{ fontSize: '1.5rem', color: '#007b3b' }}>6. Enlaces a Terceros y Cookies</h2>
 
         <h5 className="fw-bold mt-4" style={{ color: '#1a1a1a' }}>6.1.</h5>
         <p style={{ color: '#555', lineHeight: 1.8 }}>
@@ -149,7 +149,7 @@ export default function TyCPage() {
 
         <hr className="my-5" />
 
-        <h2 className="fw-bold mb-4" style={{ fontSize: '1.5rem', color: '#1b5e20' }}>7. Seguridad y Confidencialidad</h2>
+        <h2 className="fw-bold mb-4" style={{ fontSize: '1.5rem', color: '#007b3b' }}>7. Seguridad y Confidencialidad</h2>
 
         <h5 className="fw-bold mt-4" style={{ color: '#1a1a1a' }}>7.1.</h5>
         <p style={{ color: '#555', lineHeight: 1.8 }}>
@@ -158,7 +158,7 @@ export default function TyCPage() {
 
         <hr className="my-5" />
 
-        <h2 className="fw-bold mb-4" style={{ fontSize: '1.5rem', color: '#1b5e20' }}>8. Limitación de Responsabilidad: disponibilidad del servicio</h2>
+        <h2 className="fw-bold mb-4" style={{ fontSize: '1.5rem', color: '#007b3b' }}>8. Limitación de Responsabilidad: disponibilidad del servicio</h2>
 
         <h5 className="fw-bold mt-4" style={{ color: '#1a1a1a' }}>8.1.</h5>
         <p style={{ color: '#555', lineHeight: 1.8 }}>
@@ -172,7 +172,7 @@ export default function TyCPage() {
 
         <hr className="my-5" />
 
-        <h2 className="fw-bold mb-4" style={{ fontSize: '1.5rem', color: '#1b5e20' }}>9. Cancelación y Suspensión de Servicios</h2>
+        <h2 className="fw-bold mb-4" style={{ fontSize: '1.5rem', color: '#007b3b' }}>9. Cancelación y Suspensión de Servicios</h2>
 
         <h5 className="fw-bold mt-4" style={{ color: '#1a1a1a' }}>9.1.</h5>
         <p style={{ color: '#555', lineHeight: 1.8 }}>
@@ -181,7 +181,7 @@ export default function TyCPage() {
 
         <hr className="my-5" />
 
-        <h2 className="fw-bold mb-4" style={{ fontSize: '1.5rem', color: '#1b5e20' }}>10. Régimen aplicable a la adquisición de informes y su devolución</h2>
+        <h2 className="fw-bold mb-4" style={{ fontSize: '1.5rem', color: '#007b3b' }}>10. Régimen aplicable a la adquisición de informes y su devolución</h2>
 
         <p style={{ color: '#555', lineHeight: 1.8 }}>
           Siendo que INFOSOCIO provee informes en formato de datos digitales (PDF), el costo de emisión del mismo no es pasible de ser devuelto. Una vez que el usuario descarga el informe solicitado, nuestra contraprestación se extingue instantáneamente. Sólo se realizarán devoluciones dinerarias cuando INFOSOCIO, previo reclamo vía email, advierta la existencia de errores materiales, informe distorsionado visualmente o no coincidiera el perfil buscado con el del informe por error de algún registro en nuestra base de datos. El plazo para iniciar un trámite de devolución será de 24hs. desde el momento de descarga del informe solicitado.
@@ -190,12 +190,12 @@ export default function TyCPage() {
           INFOSOCIO ofrece packs de informes que pueden visualizarse en la página principal. Según el pack abonado por cantidad de informes (100, 500, 1000) el usuario registrado recibirá en su cuenta los créditos (equivalentes a informes) para utilizarlos en el momento que lo desee. Los créditos no tienen vencimiento y en cuanto a su devolución se rigen por el párrafo anterior.
         </p>
         <p style={{ color: '#555', lineHeight: 1.8 }}>
-          Si desea iniciar un procedimiento de devolución comuníquese directamente a través de: <a href="mailto:administracion@buscadata.com.ar" style={{ color: '#1b5e20' }}>administracion@buscadata.com.ar</a>.
+          Si desea iniciar un procedimiento de devolución comuníquese directamente a través de: <a href="mailto:administracion@buscadata.com.ar" style={{ color: '#007b3b' }}>administracion@buscadata.com.ar</a>.
         </p>
 
         <hr className="my-5" />
 
-        <h2 className="fw-bold mb-4" style={{ fontSize: '1.5rem', color: '#1b5e20' }}>11. Ley Aplicable y Jurisdicción Competente</h2>
+        <h2 className="fw-bold mb-4" style={{ fontSize: '1.5rem', color: '#007b3b' }}>11. Ley Aplicable y Jurisdicción Competente</h2>
 
         <h5 className="fw-bold mt-4" style={{ color: '#1a1a1a' }}>11.1.</h5>
         <p style={{ color: '#555', lineHeight: 1.8 }}>
@@ -204,7 +204,7 @@ export default function TyCPage() {
 
         <hr className="my-5" />
 
-        <h2 className="fw-bold mb-4" style={{ fontSize: '1.5rem', color: '#1b5e20' }}>12. Cambios en los términos de servicio</h2>
+        <h2 className="fw-bold mb-4" style={{ fontSize: '1.5rem', color: '#007b3b' }}>12. Cambios en los términos de servicio</h2>
 
         <p style={{ color: '#555', lineHeight: 1.8 }}>
           Puedes revisar la versión más actualizada de los Términos de Servicio en cualquier momento en esta página. INFOSOCIO se reserva el derecho, a nuestra sola discreción, de actualizar, modificar o reemplazar cualquier parte de estas Condiciones del servicio mediante la publicación de las actualizaciones y los cambios en nuestro sitio web. Es tu responsabilidad revisar nuestro sitio web periódicamente para verificar los cambios. El uso continuo de o el acceso a nuestro sitio Web o el Servicio después de la publicación de cualquier cambio en estas Condiciones de servicio implica la aceptación de dichos cambios.

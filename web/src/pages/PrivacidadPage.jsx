@@ -15,7 +15,7 @@ export default function PrivacidadPage() {
         <hr className="mb-5" />
 
         {/* Términos y Condiciones */}
-        <h2 className="fw-bold mb-4" style={{ fontSize: '1.5rem', color: '#1b5e20' }}>TÉRMINOS Y CONDICIONES DE USO - BUSCADATA.COM.AR</h2>
+        <h2 className="fw-bold mb-4" style={{ fontSize: '1.5rem', color: '#007b3b' }}>TÉRMINOS Y CONDICIONES DE USO - BUSCADATA.COM.AR</h2>
 
         <p style={{ color: '#555', lineHeight: 1.8, marginBottom: '2rem' }}>
           Antes de empezar: El documento que vas a leer a continuación establece las reglas, condiciones y deslindes de responsabilidad para el uso de nuestro sitio web. Al navegar y utilizar este sitio, aceptás de manera expresa que BUSCADATA actúa exclusivamente como un canal de intermediación comercial y facilitador de servicios provistos por empresas terceras, no poseyendo bases de datos crediticias o comerciales propias. Te recomendamos leer estas condiciones con detenimiento.
@@ -76,7 +76,7 @@ export default function PrivacidadPage() {
 
         <h5 className="fw-bold mt-3" style={{ color: '#1a1a1a' }}>3.3.</h5>
         <p style={{ color: '#555', lineHeight: 1.8 }}>
-          BUSCADATA brindará al Usuario la información del proveedor tercero cuando sea requerida a través de <a href="mailto:administracion@buscadata.com.ar" style={{ color: '#1b5e20' }}>administracion@buscadata.com.ar</a> para que este pueda ejercer sus derechos ante quien corresponda legalmente.
+          BUSCADATA brindará al Usuario la información del proveedor tercero cuando sea requerida a través de <a href="mailto:administracion@buscadata.com.ar" style={{ color: '#007b3b' }}>administracion@buscadata.com.ar</a> para que este pueda ejercer sus derechos ante quien corresponda legalmente.
         </p>
 
         <hr className="my-5" />
@@ -111,7 +111,7 @@ export default function PrivacidadPage() {
 
         <h5 className="fw-bold mt-3" style={{ color: '#1a1a1a' }}>6.2.</h5>
         <p style={{ color: '#555', lineHeight: 1.8 }}>
-          Las solicitudes de revisión por errores visuales del archivo o fallas en la entrega deberán enviarse dentro de las 24 horas de realizada la compra a <a href="mailto:administracion@buscadata.com.ar" style={{ color: '#1b5e20' }}>administracion@buscadata.com.ar</a>. Al no ser BUSCADATA el emisor original de los datos, cualquier reclamo por disconformidad en el contenido del informe será trasladado al proveedor tercero para su evaluación, sin que esto garantice un reembolso por parte de BUSCADATA.
+          Las solicitudes de revisión por errores visuales del archivo o fallas en la entrega deberán enviarse dentro de las 24 horas de realizada la compra a <a href="mailto:administracion@buscadata.com.ar" style={{ color: '#007b3b' }}>administracion@buscadata.com.ar</a>. Al no ser BUSCADATA el emisor original de los datos, cualquier reclamo por disconformidad en el contenido del informe será trasladado al proveedor tercero para su evaluación, sin que esto garantice un reembolso por parte de BUSCADATA.
         </p>
 
         <hr className="my-5" />
@@ -127,7 +127,7 @@ export default function PrivacidadPage() {
         <hr className="my-5" />
 
         {/* Políticas de Privacidad */}
-        <h2 className="fw-bold mb-4" style={{ fontSize: '1.5rem', color: '#1b5e20' }}>POLÍTICAS DE PRIVACIDAD - BUSCADATA.COM.AR</h2>
+        <h2 className="fw-bold mb-4" style={{ fontSize: '1.5rem', color: '#007b3b' }}>POLÍTICAS DE PRIVACIDAD - BUSCADATA.COM.AR</h2>
 
         <h3 className="fw-bold mt-4" style={{ fontSize: '1.2rem', color: '#1a1a1a' }}>1. Ámbito de Aplicación</h3>
 

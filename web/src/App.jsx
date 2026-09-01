@@ -8,12 +8,16 @@ import ResultsPage from './pages/ResultsPage'
 import TyCPage from './pages/TyCPage'
 import PrivacidadPage from './pages/PrivacidadPage'
 import SolicitarPage from './pages/SolicitarPage'
+import InformePage from './pages/InformePage'
+import NosotrosPage from './pages/NosotrosPage'
 
 export default function App() {
   return (
     <Routes>
       <Route element={<Layout />}>
         <Route path="/" element={<HomePage />} />
+        <Route path="/informe" element={<InformePage />} />
+        <Route path="/nosotros" element={<NosotrosPage />} />
         <Route path="/buscadatatarget" element={<AboutPage />} />
         <Route path="/infoboost" element={<InfoboostPage />} />
         <Route path="/servicios" element={<ServicesPage />} />

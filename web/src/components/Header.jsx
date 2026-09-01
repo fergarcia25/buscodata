@@ -21,14 +21,26 @@ export default function Header() {
 
   const navLinks = (
     <>
-      <li className="nav-item">
-        <NavLink className="nav-link" to="/" onClick={handleNavClick}>Inicio</NavLink>
+      <li>
+        <NavLink to="/informe" className="nav-link" onClick={handleNavClick}>
+          Que datos muestra el informe
+        </NavLink>
       </li>
-      <li className="nav-item">
-        <NavLink className="nav-link" to="/infoboost" onClick={handleNavClick}>InfoBoost</NavLink>
+      <li>
+        <NavLink to="/nosotros" className="nav-link" onClick={handleNavClick}>
+          Sobre nosotros
+        </NavLink>
       </li>
-      <li className="nav-item">
-        <NavLink className="nav-link" to="/buscadatatarget" onClick={handleNavClick}>BuscaData Target</NavLink>
+      <li>
+        <a
+          href="https://wa.me/5493512190843"
+          target="_blank"
+          rel="noreferrer"
+          className="nav-link"
+          onClick={handleNavClick}
+        >
+          Consultas
+        </a>
       </li>
     </>
   )
@@ -43,8 +55,11 @@ export default function Header() {
         onChange={(e) => setQuery(e.target.value)}
         style={{ background: 'transparent', fontSize: '0.85rem' }}
       />
-      <button className="btn btn-dark fw-bold" type="submit" style={{ fontSize: '0.8rem', borderRadius: '50px', padding: '0.3rem 1rem' }}>
-        Buscar
+      <button type="submit" className="search-btn-logo" aria-label="Buscar">
+        <img
+          src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='46'%20height='46'%20viewBox='0%200%2046%2046'%20role='img'%20aria-label='Busca%20Data'%3e%3cdefs%3e%3clinearGradient%20id='bd-isologo-gradient'%20x1='0'%20y1='0'%20x2='1'%20y2='1'%3e%3cstop%20offset='0'%20stop-color='%23009c4f'/%3e%3cstop%20offset='1'%20stop-color='%23007b3b'/%3e%3c/linearGradient%3e%3c/defs%3e%3crect%20x='3'%20y='3'%20width='40'%20height='40'%20rx='12'%20fill='url(%23bd-isologo-gradient)'/%3e%3ccircle%20cx='21'%20cy='21'%20r='8.5'%20fill='none'%20stroke='%23ffffff'%20stroke-width='3'/%3e%3cline%20x1='27.5'%20y1='27.5'%20x2='34.5'%20y2='34.5'%20stroke='%23ffffff'%20stroke-width='3.5'%20stroke-linecap='round'/%3e%3c/svg%3e"
+          alt="Buscar"
+        />
       </button>
     </form>
   )
@@ -52,8 +67,8 @@ export default function Header() {
   return (
     <>
       {menuOpen && <div className="nav-overlay" onClick={() => setMenuOpen(false)} />}
-      <nav className="container d-flex mx-auto navbar navbar-expand-lg">
-        <div className="container-fluid px-0">
+      <nav className="navbar navbar-expand-lg">
+        <div className="container container-navbar">
           <Link className="navbar-brand" to="/">
             <img src={logo} alt="Busca Data" height="52" />
           </Link>
@@ -78,9 +93,28 @@ export default function Header() {
             </div>
           </div>
 
-          <div className="collapse navbar-collapse">
-            <ul className="navbar-nav mx-auto">
-              {navLinks}
+          <div className="collapse navbar-collapse navbar-desktop">
+            <ul className="navbar-nav navbar-desktop-links">
+              <li>
+                <NavLink to="/informe" className="nav-link">
+                  Que datos muestra el informe
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/nosotros" className="nav-link">
+                  Sobre nosotros
+                </NavLink>
+              </li>
+              <li>
+                <a
+                  href="https://wa.me/5493512190843"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="nav-link"
+                >
+                  Consultas
+                </a>
+              </li>
             </ul>
             {searchForm}
           </div>
