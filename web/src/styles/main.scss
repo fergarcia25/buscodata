@@ -918,6 +918,22 @@ display: flex;
     }
   }
 
+  .footer-whatsapp {
+    color: #375643;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    transition: color 0.2s ease;
+
+    .bi-whatsapp {
+      font-size: 1.05rem;
+    }
+
+    &:hover {
+      color: $custom-primary;
+    }
+  }
+
   .footer-tagline {
     margin-bottom: 0;
     min-height: 0;
