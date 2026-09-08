@@ -47,7 +47,7 @@ export default function RequestForm({ precio, onSubmit }) {
       </div>
 
       <div className="d-grid">
-        <button type="submit" className="btn btn-warning btn-lg fw-bold">
+        <button type="submit" className="about-btn-primary btn-lg w-100 justify-content-center">
           Pagar con MercadoPago
         </button>
       </div>

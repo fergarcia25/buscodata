@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="190" height="52" viewBox="0 0 190 52" role="img" aria-label="Busca Data">
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="52" viewBox="0 0 300 52" role="img" aria-label="Informe de Personas">
   <defs>
     <linearGradient id="bd-logo-gradient" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#009c4f"/>
@@ -8,5 +8,5 @@
   <rect x="3" y="6" width="40" height="40" rx="12" fill="url(#bd-logo-gradient)"/>
   <circle cx="21" cy="24" r="8.5" fill="none" stroke="#ffffff" stroke-width="3"/>
   <line x1="27.5" y1="30.5" x2="34.5" y2="37.5" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round"/>
-  <text x="52" y="34" font-family="'Segoe UI', Tahoma, Geneva, Verdana, sans-serif" font-size="23" font-weight="700" fill="#1a1a1a">Busca&#160;<tspan fill="#009c4f">Data</tspan></text>
+  <text x="52" y="33.5" font-family="'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif" font-size="20" font-weight="700" fill="#1a1a1a">Informe <tspan fill="#009c4f">de Personas</tspan></text>
 </svg>

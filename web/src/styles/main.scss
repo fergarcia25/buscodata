@@ -1,5 +1,15 @@
 @import 'variables';
 
+// Inter — peso 300 self-hosted (subset cyrillic-ext @fontsource/inter)
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('../assets/inter-cyrillic-ext-300-normal-RId2JxDB.woff') format('woff');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
 // Estilos globales
 * {
   margin: 0;
@@ -16,14 +26,68 @@
 
 body {
   font-family: $font-family-base;
+  font-size: $font-size-body;
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   background: linear-gradient(180deg, $body-bg-start 0%, $body-bg-end 100%);
   background-attachment: fixed;
 }
 
+// Escala tipográfica por etiquetas
+h1, .h1 {
+  font-size: $font-size-h1;
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+}
+
+h2, .h2 {
+  font-size: $font-size-h2;
+  font-weight: 650;
+  line-height: 1.18;
+  letter-spacing: -0.015em;
+}
+
+h3, .h3 {
+  font-size: $font-size-h3;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+h4, .h4 {
+  font-size: $font-size-h4;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+h5, .h5 {
+  font-size: $font-size-h5;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+h6, .h6 {
+  font-size: $font-size-h6;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+p, .text-body {
+  font-size: $font-size-body;
+  line-height: 1.65;
+}
+
+small, .small {
+  font-size: $font-size-small;
+}
+
 .navbar {
   --bs-navbar-brand-padding-y: 0;
-  padding: 0.1rem 0.75rem;
+  padding: auto;
   position: fixed;
   display: flex;
   top: 0;
@@ -44,25 +108,26 @@ body {
 }
 
 .navbar-desktop {
-  gap: 0.75rem;
+  justify-content: flex-end;
 
   .navbar-desktop-links {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    margin: 0;
+    margin: 0 0 0 auto;
     padding: 0;
     list-style: none;
 
     .nav-link {
       font-family: $font-family-base;
-      font-weight: 800;
-      font-size: 0.95rem;
+      font-weight: 500;
+      font-size: 0.9rem;
       color: #13271a;
       background: none;
       border: none !important;
       box-shadow: none !important;
       padding: 0.4rem 0.8rem;
+      white-space: nowrap;
 
       &:hover,
       &.active {
@@ -70,16 +135,20 @@ body {
         background: none;
       }
     }
+
+    .nav-link-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+
+      .bi-whatsapp {
+        font-size: 1.05rem;
+      }
+    }
   }
 
   .navbar-desktop-brand {
     flex-shrink: 0;
-  }
-
-  form {
-    flex: 1;
-    max-width: 340px;
-    margin-left: auto;
   }
 }
 
@@ -115,20 +184,20 @@ body {
   display: none;
   justify-self: center;
   position: fixed;
-  top: 25vh;
-  left: 15%;
-  height: 50vh;
-  width: 70%;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 65%;
   z-index: 1050;
-  background: rgba(255, 255, 255, 0.95);
+  background: #fff;
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   flex-direction: column;
-  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: transform 0.35s ease;
   box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
   margin: auto;
-  margin-bottom: 6vh;
-  border-radius: 25px;
+  border-radius: 0;
+  transform: translateX(100%);
 
   &.open {
     display: flex;
@@ -163,7 +232,7 @@ body {
 .nav-offcanvas-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding: 0.75rem 1rem;
   border-bottom: 1px solid #e0e0e0;
 
@@ -203,7 +272,7 @@ body {
   .nav-link {
     margin: 0;
     padding: 0 !important;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 500;
     color: #1a1a1a;
     background: none;
@@ -223,10 +292,20 @@ body {
 }
 
 .nav-offcanvas-search {
-    margin-top: auto;
-    padding: 1.5rem 1.5rem 1.5rem;
-    background: $custom-primary;
-    border-radius: 20px;
+    padding: 1.5rem;
+    background: transparent;
+}
+
+.nav-offcanvas-cta {
+  margin-top: auto;
+  padding: 1.5rem;
+
+  .about-btn-primary {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
 }
 
 @media (min-width: 992px) {
@@ -278,24 +357,41 @@ body {
 
 .search-container {
   width: 100%;
-
-  .form-control {
-    padding: 0.65rem 1.5rem;
-    font-size: 1.15rem;
-    border-radius: 30px;
-    border-color: rgb(243 243 243 / 35%);
-    box-shadow: 0 4px 10px rgba(159, 159, 159, 0.25);
-
-    &:focus {
-      box-shadow: 0 4px 10px rgba(159, 159, 159, 0.25), 0 0 0 3px rgba($custom-primary, 0.12);
-    }
-  }
 }
 
 .search-field-group {
   display: flex;
-  align-items: stretch;
-  gap: 0.75rem;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.4rem 0.4rem 1.5rem;
+  background: #fff;
+  border: 1px solid $border-subtle;
+  border-radius: 2vmax;
+  box-shadow: 0 6px 22px rgba(20, 20, 20, 0.06);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+
+  .form-control {
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    padding: 0.25rem;
+    font-size: 1rem;
+    color: #141414;
+
+    &::placeholder {
+      color: #9aa7a0;
+      font-weight: 300;
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  &:focus-within {
+    border-color: rgba($custom-primary, 0.5);
+    box-shadow: 0 0 0 4px rgba($custom-primary, 0.1), 0 10px 30px rgba(20, 20, 20, 0.08);
+  }
 }
 
 .search-btn {
@@ -303,28 +399,32 @@ body {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  aspect-ratio: 1;
+  width: 58px;
+  height: 58px;
   padding: 0;
   background: none;
   border: none;
-  border-radius: 14px;
-  box-shadow: 0 4px 10px rgba(159, 159, 159, 0.4);
+  border-radius: 50%;
   cursor: pointer;
-  transition: all 0.3s ease;
   overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
 
-  .search-btn-logo {
+  img {
     display: block;
     width: 100%;
     height: 100%;
-    border-radius: 14px;
   }
 
   &:hover {
-    filter: brightness(1.12);
-    transform: translateY(-1px);
-    box-shadow: 0 6px 14px rgba(159, 159, 159, 0.5);
+    transform: scale(1.06);
+    box-shadow: 0 8px 18px rgba($custom-primary, 0.28);
   }
+}
+
+.navbar-desktop .search-btn,
+.nav-offcanvas-search .search-btn {
+  width: 40px;
+  height: 40px;
 }
 
 .search-btn-logo {
@@ -353,10 +453,19 @@ body {
   }
 }
 
+.navbar-desktop .search-field-group,
+.nav-offcanvas-search .search-field-group {
+  padding: 0.2rem 0.2rem 0.2rem 0.75rem;
+
+  .form-control {
+    font-size: 0.95rem;
+  }
+}
+
 // New complementary Hero (Home)
 .new-hero {
   position: relative;
-  min-height: calc(100vh - 60px);
+  min-height: 100vh;
   display: flex;
   align-items: center;
   padding: 8rem 0 4rem;
@@ -401,8 +510,8 @@ body {
 
 .new-hero-kicker {
   display: inline-block;
-  font-size: 0.72rem;
-  font-weight: 800;
+  font-size: 0.7rem;
+  font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: $custom-primary;
@@ -414,11 +523,12 @@ body {
 }
 
 .new-hero-title {
-  font-size: clamp(2.2rem, 4.2vw, 3.3rem);
-  font-weight: 800;
+  font-size: clamp(2rem, 3.2vw, 2.6rem);
+  font-weight: 600;
   color: #13271a;
-  line-height: 1.15;
-  margin-bottom: 1.25rem;
+  line-height: 1.05;
+  letter-spacing: -0.05em;
+  margin-bottom: 1rem;
 }
 
 .new-hero-accent {
@@ -426,12 +536,13 @@ body {
 }
 
 .new-hero-sub {
-  font-size: 1.05rem;
-  color: #55665c;
-  line-height: 1.7;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #375643;
+  line-height: 1.4;
   max-width: 480px;
   margin-bottom: 2rem;
-  min-height: 1.7em;
+  min-height: 1.6em;
 }
 
 .new-hero-cta {
@@ -441,10 +552,15 @@ body {
   gap: 1rem;
 
   .search-container {
-    max-width: 480px;
+    max-width: 640px;
 
-    .form-control {
-      background: #fff;
+    .search-field-group {
+      padding: 0.5rem 0.5rem 0.5rem 1.75rem;
+
+      .form-control {
+        font-size: 1.15rem;
+        padding: 0.5rem 0;
+      }
     }
   }
 }
@@ -466,33 +582,48 @@ body {
   }
 }
 
+.new-hero-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  margin-top: auto;
+  padding-top: 2rem;
+}
+
+.new-hero-text {
+  display: flex;
+  flex-direction: column;
+}
+
 .new-hero-visual {
   position: relative;
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 
 .new-hero-card {
   width: 100%;
-  max-width: 430px;
-  background: #ffffff;
-  border-radius: 28px;
-  overflow: hidden;
-  box-shadow: 0 30px 70px rgba(21, 72, 31, 0.18);
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  transform: rotate(2deg);
-  transition: transform 0.4s ease;
-
-  &:hover {
-    transform: rotate(0deg) translateY(-4px);
-  }
+  max-width: 480px;
+  margin: 0 auto;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .new-hero-card-img {
   width: 100%;
-  height: 220px;
-  object-fit: cover;
+  height: auto;
+  max-height: 450px;
+  object-fit: contain;
   display: block;
+  background: transparent;
 }
 
 .new-hero-card-body {
@@ -519,20 +650,20 @@ body {
 
 .new-hero-card-value {
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #13271a;
   font-family: 'Consolas', 'Menlo', monospace;
 }
 
 .new-hero-card-score {
   font-size: 1.4rem;
-  font-weight: 900;
+  font-weight: 700;
   color: $custom-primary;
 }
 
 .new-hero-card-badge {
   font-size: 0.72rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #fff;
   background: linear-gradient(135deg, $custom-primary, $custom-primary-light);
   padding: 0.3rem 0.9rem;
@@ -551,6 +682,10 @@ body {
     align-items: center;
   }
 
+  .new-hero-footer {
+    align-items: center;
+  }
+
   .new-hero-sub {
     margin-left: auto;
     margin-right: auto;
@@ -564,9 +699,22 @@ body {
     }
   }
 
+  .new-hero-visual {
+    display: none;
+  }
+
   .new-hero-card {
     margin: 0 auto;
     transform: none;
+  }
+}
+
+.new-hero-informe {
+  min-height: 40vh;
+  padding: 5rem 0 0rem;
+
+  .new-hero-sub {
+    margin-bottom: 0;
   }
 }
 
@@ -693,7 +841,7 @@ body {
 }
 
 .hero-search-reveal {
-  margin: 1rem 0;
+  margin: 2.5rem 0;
   padding: 0 4px;
   overflow: hidden;
   animation: search-reveal 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
@@ -710,8 +858,8 @@ body {
   to {
     opacity: 1;
     max-height: 140px;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
     transform: translateY(0);
   }
 }
@@ -742,8 +890,40 @@ body {
 // Footer
 .site-footer {
   background-color: $footer-bg;
-  color: #fff;
-  padding: 3rem 0 1.5rem;
+  color: #375643;
+  font-weight: 300;
+  line-height: 1.4;
+  padding: 2rem 0 1rem;
+  border-top: 1px solid $border-subtle;
+
+  h5 {
+    color: $text-strong;
+    font-weight: 600;
+  }
+
+  p,
+  .footer-muted {
+    font-weight: 300;
+    line-height: 1.4;
+    font-size: 0.9rem;
+  }
+
+  .footer-link {
+    color: #375643;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $custom-primary;
+    }
+  }
+
+  .footer-tagline {
+    margin-bottom: 0;
+    min-height: 0;
+    max-width: none;
+    font-size: 0.9rem;
+  }
 }
 
 // Cards
@@ -846,7 +1026,7 @@ body {
   background: linear-gradient(135deg, $custom-primary, lighten($custom-primary, 10%));
   color: #fff;
   font-size: 0.7rem;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   padding: 0.35rem 0.9rem;
@@ -865,10 +1045,11 @@ body {
 }
 
 .plan-title {
-  font-size: 1.2rem;
-  font-weight: 700;
+  font-size: $font-size-h4;
+  font-weight: 600;
   margin-bottom: 0.75rem;
   color: #1a1a1a;
+  line-height: 1.35;
 }
 
 .plan-desc {
@@ -922,7 +1103,7 @@ body {
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
-  border: 1px solid rgba(0, 0, 0, 0.04);
+  border: 1px solid $border-subtle;
 }
 
 .home-about-card-header {
@@ -932,7 +1113,7 @@ body {
   padding: 1rem 1.5rem;
   background: linear-gradient(135deg, $custom-primary, lighten($custom-primary, 10%));
   color: #fff;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 0.9rem;
 
   i {
@@ -1018,7 +1199,7 @@ body {
 .about-tag {
   display: inline-block;
   font-size: 0.75rem;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 2px;
   color: $custom-primary-light;
   background: rgba($custom-primary, 0.1);
@@ -1030,9 +1211,10 @@ body {
 
 .about-hero-title {
   font-size: clamp(2.4rem, 3.2vw, 3.5rem);
-  font-weight: 800;
+  font-weight: 600;
   color: #1a1a1a;
-  line-height: 1.1;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
   margin-bottom: 1rem;
 }
 
@@ -1079,6 +1261,33 @@ body {
     border-color: $custom-primary-light;
     background: rgba($custom-primary, 0.08);
     color: $custom-primary;
+  }
+}
+
+.about-cta-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.about-btn-xl {
+  padding: 1.15rem 2.75rem;
+  font-size: 1.15rem;
+  border-radius: 16px;
+}
+
+.informe-cta-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 14vh;
+  padding: 0;
+  overflow: hidden;
+  background: linear-gradient(180deg, #f6faf6 0%, #ffffff 60%, #f0f0f0 100%);
+
+  .about-cta-wrapper {
+    margin-top: 0;
   }
 }
 
@@ -1148,7 +1357,7 @@ body {
 .about-label {
   display: inline-block;
   font-size: 0.75rem;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: 2px;
   color: #666;
   margin-bottom: 0.75rem;
@@ -1156,10 +1365,11 @@ body {
 
 .about-title {
   font-size: clamp(1.8rem, 3vw, 2.5rem);
-  font-weight: 800;
+  font-weight: 600;
   color: #1a1a1a;
   margin-bottom: 1rem;
   line-height: 1.2;
+  letter-spacing: -0.015em;
 }
 
 .about-text {
@@ -1181,7 +1391,7 @@ body {
 
 .about-stat-num {
   font-size: 1.8rem;
-  font-weight: 800;
+  font-weight: 700;
   color: $custom-primary;
   line-height: 1;
 }
@@ -1280,21 +1490,22 @@ body {
 
   .about-tc-number {
     font-size: 2.5rem;
-    font-weight: 900;
+    font-weight: 700;
     color: rgba($custom-primary, 0.3);
     line-height: 1;
     margin-bottom: 0.75rem;
   }
 
   h4 {
-    font-size: 1.1rem;
-    font-weight: 700;
+    font-size: $font-size-h4;
+    font-weight: 600;
     color: #1a1a1a;
     margin-bottom: 0.5rem;
+    line-height: 1.35;
   }
 
   p {
-    font-size: 0.88rem;
+    font-size: $font-size-small;
     color: #666;
     margin: 0;
     line-height: 1.6;
@@ -1314,14 +1525,14 @@ body {
   background: #fff;
   border-radius: 20px;
   padding: 2.5rem 2rem;
-  border: 1px solid rgba(0, 0, 0, 0.04);
+  border: 1px solid rgb(15 90 45 / 35%);
   transition: all 0.35s ease;
   height: 100%;
 
   &:hover {
     transform: translateY(-6px);
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.06);
-    border-color: transparent;
+    border: 1px solid rgb(15 90 45 / 35%);
   }
 
   .about-feat-icon {
@@ -1329,7 +1540,7 @@ body {
     height: 56px;
     border-radius: 16px;
     background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
-    display: flex;
+display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 1.25rem;
@@ -1338,22 +1549,40 @@ body {
   }
 
   h4 {
-    font-size: 1.1rem;
-    font-weight: 700;
+    font-size: $font-size-h4;
+    font-weight: 600;
     margin-bottom: 0.75rem;
     color: #1a1a1a;
   }
 
   h3 {
     margin-bottom: 0.75rem;
+    font-size: $font-size-h3;
+    font-weight: 600;
   }
 
   p {
-    font-size: 0.9rem;
+    font-size: $font-size-small;
     color: #666;
     line-height: 1.7;
     margin: 0;
   }
+}
+
+.about-feat-card-sm {
+  padding: 1.25rem 1.5rem;
+
+  .about-btn-primary {
+    padding: 0.55rem 1.4rem;
+    font-size: 0.9rem;
+    border-radius: 12px;
+  }
+}
+
+.about-feat-card-sm .about-feat-icon {
+  width: 60px;
+  height: 60px;
+  font-size: 2rem;
 }
 
 .about-feat-tags {
@@ -1395,7 +1624,7 @@ body {
 
 .about-benefit-card {
   background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  border: 1px solid $border-subtle;
   border-radius: 20px;
   padding: 1.2rem 1.6rem 1.8rem;
   text-align: center;
@@ -1415,14 +1644,15 @@ body {
   }
 
   h4 {
-    font-size: 1rem;
-    font-weight: 700;
+    font-size: $font-size-h5;
+    font-weight: 600;
     color: #1a1a1a;
     margin-bottom: 0.5rem;
+    line-height: 1.4;
   }
 
   p {
-    font-size: 0.85rem;
+    font-size: $font-size-small;
     color: #666;
     margin: 0;
     line-height: 1.6;
@@ -1456,7 +1686,7 @@ body {
   background: linear-gradient(135deg, $custom-primary, $custom-primary-light);
   color: #fff;
   font-size: 1.1rem;
-  font-weight: 800;
+  font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1478,14 +1708,15 @@ body {
   padding-top: 0.5rem;
 
   h4 {
-    font-size: 1.1rem;
-    font-weight: 700;
+    font-size: $font-size-h4;
+    font-weight: 600;
     color: #1a1a1a;
     margin-bottom: 0.5rem;
+    line-height: 1.35;
   }
 
   p {
-    font-size: 0.9rem;
+    font-size: $font-size-small;
     color: #666;
     line-height: 1.7;
     margin: 0;

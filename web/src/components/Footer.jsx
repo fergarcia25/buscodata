@@ -6,32 +6,27 @@ export default function Footer() {
       <div className="container">
         <div className="row g-4">
           <div className="col-lg-4">
-            <h5 className="fw-bold mb-3">Busca Data</h5>
-            <p className="text-white-50">
-              Soluciones de informes personalizados con rapidez y confianza.
+            <h5 className="fw-bold mb-3">Informe de Personas</h5>
+            <p className="new-hero-sub footer-tagline">
+              El informe más completo del mercado.
+            </p>
+            <p className="footer-muted small mt-2 mb-0">
+              &copy; {new Date().getFullYear()}. Todos los derechos reservados.
             </p>
           </div>
           <div className="col-lg-4">
             <h5 className="fw-bold mb-3">Enlaces</h5>
             <ul className="list-unstyled">
-              <li className="mb-2"><Link to="/informe" className="text-white-50 text-decoration-none">Qué contiene el informe</Link></li>
-              <li className="mb-2"><Link to="/nosotros" className="text-white-50 text-decoration-none">Sobre Nosotros</Link></li>
-              <li className="mb-2"><Link to="/infoboost" className="text-white-50 text-decoration-none">Infoboost</Link></li>
-              <li className="mb-2"><Link to="/buscadatatarget" className="text-white-50 text-decoration-none">BuscaData Target</Link></li>
-              <li className="mb-2"><Link to="/terminos-y-condiciones" className="text-white-50 text-decoration-none">Términos y Condiciones</Link></li>
-              <li className="mb-2"><Link to="/politicas-de-privacidad" className="text-white-50 text-decoration-none">Políticas de Privacidad</Link></li>
+              <li className="mb-2"><Link to="/terminos-y-condiciones" className="footer-link text-decoration-none">Términos y Condiciones</Link></li>
+              <li className="mb-2"><Link to="/politicas-de-privacidad" className="footer-link text-decoration-none">Políticas de Privacidad</Link></li>
             </ul>
           </div>
           <div className="col-lg-4">
             <h5 className="fw-bold mb-3">Contacto</h5>
-            <p className="text-white-50 mb-1">contacto@buscadata.com</p>
-            <p className="text-white-50 mb-1">+54 11 1234-5678</p>
+            <p className="footer-muted mb-1">contacto@buscadata.com</p>
+            <p className="footer-muted mb-1">+54 11 1234-5678</p>
           </div>
         </div>
-        <hr className="my-3" style={{ borderColor: 'rgba(255,255,255,0.1)' }} />
-        <p className="text-center text-white-50 small mb-0">
-          &copy; {new Date().getFullYear()} Busca Data. Todos los derechos reservados.
-        </p>
       </div>
     </footer>
   )

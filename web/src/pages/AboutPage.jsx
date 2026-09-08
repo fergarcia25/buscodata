@@ -30,7 +30,7 @@ export default function AboutPage() {
                     <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#22c55e', display: 'inline-block' }} />
                     <span style={{ fontSize: '0.8rem', fontWeight: 600, color: '#1a1a1a' }}>DATOS EN VIVO</span>
                   </div>
-                  <div style={{ fontSize: '1.8rem', fontWeight: 800, color: '#1a1a1a' }}>12.4M</div>
+                  <div style={{ fontSize: '1.8rem', fontWeight: 700, color: '#1a1a1a' }}>12.4M</div>
                   <div style={{ fontSize: '0.85rem', color: '#666' }}>perfiles activos segmentados</div>
                 </div>
               </div>

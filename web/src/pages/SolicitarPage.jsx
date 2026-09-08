@@ -26,20 +26,40 @@ export default function SolicitarPage() {
     alert('Redirigiendo a MercadoPago para completar el pago...')
   }
 
+  const sexo = (persona.sexo || '').toLowerCase()
+  const genderIcon =
+    sexo === 'masculino'
+      ? 'bi-person-standing'
+      : sexo === 'femenino'
+      ? 'bi-person-standing-dress'
+      : 'bi-person-bounding-box'
+
   return (
-    <div className="container py-5">
+    <div className="mt-5 container py-5">
+      <div className="my-4 text-center">
+        <h1 className="new-hero-title">
+          Solicitar Informe de <span className="new-hero-accent">{persona.nombre}</span>
+        </h1>
+      </div>
+
       <div className="row justify-content-center">
         <div className="col-lg-8">
-          <div className="card shadow-sm">
-            <div className="card-body p-4">
-              <div className="mb-4">
-                <h3 className="fw-bold">{persona.nombre}</h3>
-                <p className="text-muted mb-0">DNI: {persona.dni} | CUIL: {persona.cuil}</p>
-                <p className="text-muted">{persona.edad} años | {persona.sexo} | {persona.ciudad}, {persona.provincia}</p>
+          <div className="about-feat-card">
+            <div className="d-flex align-items-center gap-3 mb-3">
+              <div className="about-feat-icon">
+                <i className={`bi ${genderIcon}`}></i>
               </div>
-              <hr />
-              <RequestForm precio={PRECIO} onSubmit={handleSubmit} />
+              <div>
+                <h3 className="fw-bold mb-0 text-gradient">{persona.nombre}</h3>
+                <p className="mb-0 text-muted" style={{ fontSize: '0.85rem' }}>
+                  {persona.edad} años &middot; {persona.sexo} &middot; {persona.ciudad}, {persona.provincia}
+                </p>
+              </div>
             </div>
+
+            <hr />
+
+            <RequestForm precio={PRECIO} onSubmit={handleSubmit} />
           </div>
         </div>
       </div>

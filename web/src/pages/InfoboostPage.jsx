@@ -30,7 +30,7 @@ export default function InfoboostPage() {
                     <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#22c55e', display: 'inline-block' }} />
                     <span style={{ fontSize: '0.8rem', fontWeight: 600, color: '#1a1a1a' }}>ENRIQUECIMIENTO</span>
                   </div>
-                  <div style={{ fontSize: '1.8rem', fontWeight: 800, color: '#1a1a1a' }}>100%</div>
+                  <div style={{ fontSize: '1.8rem', fontWeight: 700, color: '#1a1a1a' }}>100%</div>
                   <div style={{ fontSize: '0.85rem', color: '#666' }}>autogestionable y en línea</div>
                 </div>
               </div>

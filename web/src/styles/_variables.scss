@@ -12,14 +12,35 @@ $custom-accent: #ff6f00;
 
 // Tema light
 $body-bg-start: #ffffff;
-$body-bg-end: #ececec;
+$body-bg-end: #f6f6f6;
+
+// Bordes y radios (estilo deepsearchai.co)
+$border-subtle: #e7e7e7;
+$radius-md: 0.625rem;
+$radius-lg: 1rem;
+$radius-round: 100vmax;
 
 // Tipografía
-$font-family-base: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$font-family-base: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+// Escala tipográfica moderna y delgada (por etiqueta)
+$font-size-h1: clamp(2.5rem, 4.5vw, 3.5rem);
+$font-size-h2: clamp(1.9rem, 3vw, 2.5rem);
+$font-size-h3: clamp(1.4rem, 2vw, 1.75rem);
+$font-size-h4: 1.15rem;
+$font-size-h5: 1rem;
+$font-size-h6: 0.9rem;
+$font-size-body: 1rem;
+$font-size-small: 0.85rem;
 
 // Layout
 $header-height: 80px;
-$footer-bg: #007b3b;
+$footer-bg: #f9f9f9;
+
+// Textos (theme light)
+$text-strong: #141414;
+$text-muted: #55665c;
+$text-faint: #7c8a81;
 
 // Import Bootstrap
 @import "bootstrap/scss/bootstrap";

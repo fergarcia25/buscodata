@@ -7,7 +7,7 @@ export default function NosotrosPage() {
         <div className="row g-5 align-items-center">
           <div className="col-lg-6">
             <div className="about-label">SOBRE NOSOTROS</div>
-            <h2 className="about-title">Busca Data</h2>
+            <h2 className="about-title">Informe de Personas</h2>
             <p className="about-text">
               Somos una plataforma especializada en la generación de informes personalizados.
               Nuestro objetivo es brindarte información confiable y detallada de manera rápida y sencilla.

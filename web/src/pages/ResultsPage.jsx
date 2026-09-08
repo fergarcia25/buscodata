@@ -15,15 +15,11 @@ export default function ResultsPage() {
 
   return (
     <div className="mt-5 container py-5">
-      <div className="my-4">
-        <h2 className="fw-bold">Resultados de búsqueda</h2>
-        <p className="text-muted">
-          {query ? (
-            <>Mostrando resultados para: <strong>"{query}"</strong></>
-          ) : (
-            'Ingrese un término de búsqueda'
-          )}
-        </p>
+<div className="my-4">
+        <h1 className="new-hero-title">
+          Resultados de: <span className="new-hero-accent">{query}</span>
+        </h1>
+        <p className="text-muted">Se encontraron {staticResults.length} resultados</p>
       </div>
 
       <div className="d-md-none mb-3">
@@ -44,10 +40,9 @@ export default function ResultsPage() {
 
       {query ? (
         <>
-          <p className="text-muted small">Se encontraron {staticResults.length} resultados</p>
           <div className="row">
             {staticResults.map((r, i) => (
-              <div className="col-md-6 mb-3" key={r.id}>
+              <div className="col-12 mb-3" key={r.id}>
                 <ResultCard result={r} />
               </div>
             ))}

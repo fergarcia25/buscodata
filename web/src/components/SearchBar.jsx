@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import isologo from '../assets/images/isologo.svg'
 
-export default function SearchBar({ large = false, autoFocus = false }) {
+export default function SearchBar({ large = false, autoFocus = false, onSearch }) {
   const [query, setQuery] = useState('')
   const navigate = useNavigate()
   const inputRef = useRef(null)
@@ -17,6 +17,7 @@ export default function SearchBar({ large = false, autoFocus = false }) {
     e.preventDefault()
     if (query.trim()) {
       navigate(`/resultados?q=${encodeURIComponent(query.trim())}`)
+      if (onSearch) onSearch()
     }
   }
 
@@ -27,7 +28,7 @@ export default function SearchBar({ large = false, autoFocus = false }) {
           ref={inputRef}
           type="text"
           className="form-control"
-          placeholder="Ingresa tu busqueda"
+          placeholder="Ingresa tu búsqueda"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />
