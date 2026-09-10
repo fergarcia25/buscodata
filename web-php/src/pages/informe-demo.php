@@ -288,11 +288,11 @@
         }
 
         .gauge-legend {
-            font-size: 8.5px;
+            font-size: 10px;
             color: var(--text-muted);
             line-height: 1.4;
-            text-align: left;
-            margin-left: 5px;
+            display: inline-flex;
+            margin-left: 0;
         }
         .gauge-legend-dot {
             display: inline-block;

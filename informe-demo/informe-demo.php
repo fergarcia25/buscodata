@@ -275,9 +275,9 @@
                             </svg>
                         </div>
                         <div class="gauge-legend">
-                            <div><span class="gauge-legend-dot" style="background:#10a34a;"></span><strong>700 - 1000</strong> Bajo</div>
-                            <div><span class="gauge-legend-dot" style="background:#f1c40f;"></span><strong>400 - 699</strong> Medio</div>
-                            <div><span class="gauge-legend-dot" style="background:#e74c3c;"></span><strong>0 - 399</strong> Alto</div>
+                            <div><span class="gauge-legend-dot" style="background:#10a34a;"></span> <strong style="font-size: 10px;"> BAJO </strong> <span style="display: inline-flex;">700 - 1000</span></div>
+                            <div><span class="gauge-legend-dot" style="background:#f1c40f;"></span> <strong style="font-size: 10px;"> MEDIO </strong> <span style="display: inline-flex;">400 - 699</span></div>
+                            <div><span class="gauge-legend-dot" style="background:#e74c3c;"></span> <strong style="font-size: 10px;"> ALTO </strong> <span style="display: inline-flex;">0 - 399</span></div>
                         </div>
                     </div>
                 </div>
