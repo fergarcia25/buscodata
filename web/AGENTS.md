@@ -18,23 +18,31 @@ Redirects `/admin/api/...` to `http://localhost/admin/api/...` (Laragon).
 ## Pages
 | Route | File |
 |---|---|
-| `/` | HomePage — hero + search + services + about |
+| `/` | HomePage — animated hero + search |
+| `/informe` | InformePage — what the report contains |
+| `/nosotros` | NosotrosPage |
 | `/buscadatatarget` | AboutPage |
 | `/infoboost` | InfoboostPage |
 | `/servicios` | ServicesPage |
 | `/resultados?q=...` | ResultsPage (static results) |
-| `/solicitar/:id` | SolicitarPage (request form) |
+| `/terminos-y-condiciones` | TyCPage |
+| `/politicas-de-privacidad` | PrivacidadPage |
+| `/solicitar/:id` | SolicitarPage (request form → MercadoPago) |
 
 ## Design
 - Light theme: white background with gradient to light gray (`$body-bg-start`, `$body-bg-end`).
 - Green tones (`#1b5e20`, `#2e7d32`) — no blue, no red.
-- Search button: icon-only, shows the logo isologo (`src/assets/images/isologo.svg`), separated from the input (`.search-btn`).
+- Hero: typed title + accent, decorative blobs (`.new-hero-*`).
 - Bootstrap SASS deprecation warnings are harmless.
 
 ## Search behavior (static)
-Home search captures input → navigates to `/resultados?q=...` → shows 2 static items with decorative filters.
+Home search captures input → navigates to `/resultados?q=...` → shows 2 static items with decorative filters. `/solicitar/:id` shows a static person (MercadoPago redirect still mocked via alert).
 
 ## Key files
+- `src/App.jsx` — route definitions
+- `src/Layout.jsx` — common layout (Header + Footer)
 - `src/styles/_variables.scss` — color variables
 - `src/styles/main.scss` — global styles
 - `src/components/SearchBar.jsx` — search input + button
+- `src/components/RequestForm.jsx` — solicitud form
+- `src/components/FilterSidebar.jsx` — decorative filters on results

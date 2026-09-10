@@ -1,16 +1,31 @@
 <?php
 // Database configuration
+
+// ENTORNO: STAGING Hostinger
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASS', '');
 define('DB_NAME', 'infosocio');
+/*
+// ENTORNO: STAGING Hostinger
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'u653101286_infosocio');
+define('DB_USER', 'u653101286_infosocio');
+define('DB_PASS', '?FUI~f6#h0');
+*/
+/*
+// ENTORNO: PRODUCTION Beahost.com
+---
+DB: infosoci_db_infosocio
+DB user: infosoci_db_infosocio
+DB user password : wtx0=SzAPMN+4v(S
+---
 
-// Production (uncomment for production)
-// define('DB_HOST', 'localhost');
-// define('DB_USER', 'infosocio_prod');
-// define('DB_PASS', 'pass_prod');
-// define('DB_NAME', 'infosocio_prod');
-
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'infosoci_db_infosocio');
+define('DB_USER', 'infosoci_db_infosocio');
+define('DB_PASS', 'wtx0=SzAPMN+4v(S');
+*/
 function getDB() {
     static $pdo = null;
     if ($pdo === null) {
@@ -27,7 +42,7 @@ function getDB() {
             );
         } catch (PDOException $e) {
             http_response_code(500);
-            echo json_encode(['success' => false, 'message' => 'Database connection failed']);
+            echo json_encode(['success' => false, 'message' => 'Database connection failed: ' . $e->getMessage()]);
             exit;
         }
     }
